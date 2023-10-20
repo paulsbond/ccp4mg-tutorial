@@ -30,6 +30,7 @@ img.icon {
     display: inline-block;
     margin: 0 0.5rem;
     height: 1.2em;
+    border: none;
 }
 
 .container {
