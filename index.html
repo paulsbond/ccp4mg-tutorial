@@ -1,0 +1,1172 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="author" content="Stuart McNicholas, Liz Potterton and Paul Bond">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCP4mg Workshop</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/custom.css">
+
+<div class="container">
+
+  <h1>CCP4 Molecular Graphics (CCP4mg) Workshop</h1>
+
+  <table class="banner">
+    <tbody>
+      <tr>
+        <td rowspan="2" width="200"><img src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/weblogo175.gif"
+            alt="CCP4 web logo"></td>
+        <td class="logohead">CCP4 Molecular Graphics Tutorial</td>
+        <td rowspan="2" width="90"><img src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/ccp4mg_icon.gif"
+            alt="CCP4mg"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ol class="no-print">
+    <li><a href="#1">Introduction - loading and viewing a PDB/mmCIF file</a>
+      <ol>
+        <li><a href="#1.1">Starting CCP4mg</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <h2>Introduction - loading and viewing a PDB/mmCIF file</h2>
+
+  <a name="starting">
+    <h3>Starting CCP4mg</h3>
+    <p>
+      This may depend on your installation but normally:<br>
+      <br>Windows: double click on the CCP4MG icon in the desktop, or click on
+      Start-&gt;All Programs-&gt;CCP4 Molecular Graphics-&gt;CCP4MG
+      <br>Linux: type <b>ccp4mg</b> in a terminal window.
+      <br>Macs: double click on the QtMG icon in the Applications folder
+      <br>A window with two panes should appear: the large 'main window' and the small 'Display Table'.
+    </p>
+
+  </a><a name="copying_data">
+    <h3>Copying some data to your own area</h3>
+    <p>
+      Some data files are provided which you should copy to your own area.
+      Or you can try using your own PDB or mmCIF files and MTZ or CCP4 map files.
+      <br>From the <b>File</b> pull-down menu select <b>Get tutorial data</b>. You will be told that a directory called
+      <i>ccp4mg_tutorial</i> has been created in your home area.
+    </p>
+
+
+  </a><a name="loading">
+    <h3>Loading a PDB/mmCIF file</h3>
+    <p>
+      From the file pull-down select <b>Open data file</b>.
+      At the top of the <i>Open data file</i> window there is a
+      <i>picture wizard</i> menu which allows you to select the appearance
+      for a newly loaded model and next to the menu is a small picture
+      showing an example of a model drawn in the current style. Try looking at some
+      of the styles available in the menu but initially select, from the <b>ribbons</b> folder,
+      <b>colour blend thru chain</b>.
+      Now select a file: go to the
+      <b>ccp4mg_tutorial</b> directory in your home area and select
+      <b>1df7.pdb</b> or a coordinate file of your choice (preferably one
+      containing ligands). Click on the <b>Open</b> button and then close
+      the file selection window.
+    </p>
+    <p>
+      Another method is to download coordinates from one of the online PDB archives.
+      From the <b>File</b> menu select <b>Download coordinate file</b> and in the download window enter the 4-letter
+      code for a model (e.g <b>1alz</b>). If you click return in the code window then a default name for the local PDB
+      file is shown in the line below. Click the <b>Apply</b> button and the file will be downloaded to your computer
+      and read into CCP4MG.
+      If you do not know the 4-letter code for the structure that you want then click on the <b>View server web page</b>
+      button to bring up a web browser showing the structure database query
+      page. Once you have found the structure you want you can use either the
+      database download option or the CCP4 interface.
+    </p>
+
+  </a>
+  <p><a name="loading">
+      Addtionally, you can click on model files in the CCP4mg documentataion browser window to load them into the
+      program.<span class="noprint"> For example, click on this model file on the local file system: </span></a><a
+      class="noprint" href="https://www.ccp4.ac.uk/MG/tutorial/data/1df7.pdb">1df7.pdb</a><span class="noprint">. or the
+      remote url </span><a class="noprint" href="http://www.ebi.ac.uk/pdbe-srv/view/files/1df7.ent">1df7.ent</a><span
+      class="noprint">.</span>
+  </p>
+  <p class="noprint">
+    This also works with <a href="https://www.ccp4.ac.uk/MG/tutorial/data/toxd.mgarchive.zip">a local MG archive
+      file</a> or <a href="https://www.ccp4.ac.uk/MG/ccp4mg_help/tutorial/MG/tutorial/data/toxd.mgarchive.zip">a remote
+      MG archive file</a>.
+  </p>
+
+  <p>
+    If this is the first model that you have loaded it should be in the
+    centre of the screen but if it is not go to the <b>View</b> menu and
+    select <b>Recentre</b>.
+  </p>
+
+  <a name="view">
+    <h3>Changing the view</h3>
+    <p><b>Rotate</b>: with the cursor in the main window, hold down the
+      left mouse button and drag left-right or up-down.
+      <br>Rotate about out-of-screen axis hold down the shift key and the left mouse button and move mouse in circular
+      motion.
+      <br><b>Zoom</b>: Use the mouse wheel or hold down the middle mouse button and drag up-down. Zoom can also be set
+      by hand by doing Display-&gt;show/change zoom. This useful in getting the same zoom factor for different images.
+      <br><b>Translation</b>: hold down the shift key and middle mouse button and drag.
+      <br>
+      On a Mac laptop with a trackpad, Ctrl+trackpad "button" does the same as right mouse button, Alt+trackpad "button"
+      does the same as middle mouse button.
+      <br>
+      <br><b>Centre on an atom</b>: double click on the atom or right-click on the atom and select "Centre on ..." <br>
+    </p>
+    <p>
+      Clip planes help you see an area of interest by
+      removing everything in front or behind the centre of the display.
+      Clip planes can be switched on or off in the <b>Display</b> menu.
+      <br><b>Clip plane width</b>: Hold down the <b>c</b> key and the
+      middle mouse button and move mouse up or down.
+    </p>
+    <p><img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/fog_icon.jpg" alt="fog icon" height="20"
+        width="20">
+      Fog helps you to see depth by making distant parts of the structure
+      fainter.
+      Fog can be switched on or off in the <b>Display</b> menu.</p>
+
+  </a>
+  <p class="noprint"><a name="view"></a><a href="https://www.ccp4.ac.uk/MG/ccp4mg_help/graphics_window.html"
+      target="_self">More mouse and keyboard bindings</a></p>
+
+
+  <a name="finding">
+    <h3>Finding things in the molecule</h3>
+    <p><img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/centre_on_icon.jpg" alt="centre on
+    icon" height="20" width="20">
+      This tool will move the view so an atom or residue of your choice
+      is at the centre of the screen. From the <b>View</b> pull-down menu select <b>Find/centre on..</b>.
+      <br><img class="shrinktoprint" border="0"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_intro_centre_on.jpg"
+        alt="tutorial_intro_centre_on"><br>
+      In the new window you can select a chain or residue(s) or atom(s) and
+      click the <b>Centre on</b> button to go to the selection.
+    </p>
+
+    <p>
+      <img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tree_view_icon.jpg" alt="tree view
+    icon" height="20" width="20">Click on the tree view to open the tree view of the model. The tree view works like a
+      file browser with the model split at the first level into peptide, monomers and
+      solvent etc.. Open the monomers folder and select one of the ligands by
+      clicking on it. Click on the <b>Centre on</b> button to go to the
+      selected ligand. The view will change to show the selected ligand.
+    </p>
+  </a>
+  <p><a name="finding">The tree view selection tool is used in many parts of the program.
+      You can click on more than one line in tree view.
+      The selected atoms and residues are reported in the line edit widget
+      above the tree view. The syntax used for the atom and residue names
+      (e.g. <i>A/27/CA</i>) is loosely based on
+      Linux computer file system names with the different levels in the
+      model hierarchy of chain, residue and atom separated by a forward
+      slash. The residue type might also be included in the residue level
+      (e.g. <i>A/27(ASP)/CA</i>). You can also type a selection
+      command into the line edit widget.
+      <span class="noprint">See </span></a><a class="noprint"
+      href="https://www.ccp4.ac.uk/MG/ccp4mg_help/selection.html" target="cids">atom naming
+      convention</a><span class="noprint"> for more information. </span></p>
+  <p><img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tree_view_clear_icon.jpg" alt="tree view
+    clear icon"> To clear the selection click on the clear icon. The tree view can be closed by clicking elsewhere in
+    the window or hitting the <i>Esc</i> button.</p>
+
+  <a name="display_table">
+    <h3>The Display Table and Picture Wizard</h3>
+    <p>
+    </p>
+    <p>The display table lists all of the loaded data objects
+      (for example each loaded PDB, mmCIF, MTZ or map file becomes one data
+      object). For each data object the display objects are listed one per line.
+      You probably have one (1df7) data object and several display object currently listed.
+    </p>
+    <br><img class="shrinktoprint" border="0"
+      src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_intro_display_table.jpg"
+      alt="tutorial_intro_display_table"><br>
+
+    <p><img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/display_table_MolData.jpg" alt="MolData"
+        height="20" width="20">
+      Usually the easiest way to set up a picture is with the Picture
+      Wizard which you saw when opening the PDB file. It can also be used to
+      change the display of a PDB file that is already loaded.
+      Click on the icon next to the name of the data object to
+      open a menu with several options including
+      <b>Picture wizard..</b> which opens a window with the picture wizard to
+      change the appearance of the model. Note the button in this window to
+      <b>Delete existing display objects</b> which should be checked to
+      clear the existing picture. You can try some of the options. Note that
+      some of the picture styles require you to select groups of atoms; for
+      example interfaces must be between two groups of atoms. Most styles
+      will make intelligent atom selections automatically.
+    </p>
+  </a>
+  <p><a name="display_table">
+
+
+    </a><a name="model_display_object"></a></p>
+  <h3><a name="model_display_object">Creating a model display object</a></h3><a name="model_display_object">
+
+    <p><img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/display_table_MolDisp.jpg" alt="MolDisp"
+        height="20" width="20">
+      It is possible to edit the the scenes created by the Picture
+      Wizard or create display objects from new. To see how to do this
+      go back to the display table. For each display object there is an icon and three buttons for the <i>Atom
+        Selection</i>, the <i>Colour Scheme</i> and
+      the <i>Display Style</i> of the display object. Click on the icon and you
+      will see a menu with options to control (among other things) the
+      object visibility. You can also hide or show an object by
+      clicking on the icon with the right mouse button. Hide all of the
+      objects before creating a new one..</p>
+
+    <p><img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/display_table_MolData.jpg" alt="MolData"
+        height="20" width="20">
+      Create a new display object: click on the model object icon
+      and select <b>Add model display object</b> from the menu.</p>
+
+    <p><img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/display_table_MolDisp.jpg" alt="MolDisp"
+        height="20" width="20">A new
+      line should appear in the display table which shows that <i>all</i> of
+      the model is selected and is coloured by <i>Atom type</i> and drawn in display style
+      <i>Bonds</i>. We will look at these three items in reverse order.
+      Click on the button labelled <i>Bonds</i> and you will
+      see a menu with many options for different drawing styles - try
+      these, beware some options are not appropriate for this model and
+      nothing will be drawn. Finally select <b>Cylinders</b> before moving
+      on to click on the button labelled <i>Atom
+        type</i> to see a menu of alternative colouring schemes, try some such
+      as <b>Secondary structure</b> and <b>Residue property</b> -&gt;
+      <b>Residue type</b>.
+    </p>
+
+    <p>To alter the selection of atoms displayed click on the button
+      labelled <b>All atoms</b>. The menu that appears has some quick selection
+      options such as <b>Peptide</b> and <b>CA trace</b>. Try the
+      <b>Selection browser..</b> option which opens a new window with a tree
+      view of the model similar to that seen in the <i>Find/centre on</i>
+      interface earlier. You can unselect everything with the <b>Clear</b> button at the bottom of the window. Then try
+      opening the
+      <i>Peptide</i> branch and 'digging down' to select ranges of residues
+      and individual atoms in the models. You will need to click the
+      <b>Apply selection</b> button at the bottom of the window to see the
+      display updated. Beware that if you have a higher level selected (e.g. 'peptide') then
+      everything in the branch is selected even if it is not
+      highlighted.
+    </p>
+
+    <p><img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tree_view_icon.jpg" alt="tree view
+    icon">
+      Now try looking at some of the specialised selection tools accessed
+      from the combobox at the top right of the Selection browser
+      window. When you choose an tool from this combobox a new frame
+      appears near the top of the browser window.</p>
+    <p>To
+      select just the residues of the binding site for one of the ligands try the following.
+      Choose the <b>neighbours</b> option from the selection tools
+      combobox. In this tool you must enter some 'central' group of atoms
+      or residues and all the neighbouring structure will be selected. In the new frame there is a selection
+      widget similar to that in the <i>Find/centre on</i> interface. Click
+      on the tree icon and select one of the ligands from the
+      <i>Monomers</i> branch. Then click on the <b>Select neighbours</b>
+      button. You will see the residues around the ligand drawn on the
+      display but, by default, the ligand itself is not drawn. You might
+      like to go back to the display table and make the display object of
+      the ligand visible. You can also go back to the tree view of the model and see
+      that the residues selected by the Neighbours tool are now
+      highlighted. You can use the tree view to change
+      the selection for the binding site.
+    </p>
+    <p>After editing a complex selection you may like to save it: click the
+      <b>Save</b> button at the bottom of the window and, in the new window,
+      enter a name for the selection before clicking the <b>Save</b>
+      button.The saved selections can be accessed from the <b>saved selection</b> tools
+      tab.
+    </p>
+
+  </a><a name="hydrogen_bonds">
+    <h3>Creating hydrogen bonds</h3>
+
+    <p><img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/display_table_HBonds.jpg" alt="HBonds"
+        height="20" width="20">
+      The current display objects are (probably) all
+      model display objects. There are other types of display object to show
+      hydrogen bonds, contacts, surfaces and annotation on the model. For
+      example try creating a hydrogen bond display object. From the model
+      icon menu choose <b>Add display object</b> and
+      <b>HBonds</b>. A new row with the HBonds icon appears in the
+      display table and all the hydrogen bonds in the model will be
+      drawn. To show only the hydrogen bonds between the ligand and the
+      binding site you need to change the first two columns in the display
+      table which are two sets of atoms. First click on the
+      left hand column in the display table (currently labelled <i>All atoms</i>)
+      and select <b>Monomers</b>. To select the binding site try restoring
+      the selection that you saved earlier. Click on the middle row (currently
+      labelled <i>Same as other</i> and select <b>Selection browser.</b>
+      From the tools combobox at the top right of the selection browser window
+      pick <b>saved selection</b>. From the listing of saved selections
+      pick your saved binding site and click <b>Restore</b>. You now
+      see hydrogen bonds between the ligand(s) and the binding site.
+    </p>
+    <p>To change how the hydrogen bonds are drawn click on the hydrogen
+      bond display object icon and select <b>Drawing style</b> and
+      try the options in the new window.</p>
+
+
+    <hr>
+    <h2>Electron density maps</h2>
+
+  </a><a name="loading">
+    <h3>Loading a map and model</h3>
+    <p>Load the coordinate file <i>toxd.pdb</i> with the picture wizard
+      style set to <b>Bonds : all atoms</b>. Then load
+      the CCP4 MTZ (structure factor) file <i>toxd_sfall1.mtz</i>. In the new window you can select the structure factor
+      and
+      phase data from the file - accept the defaults by clicking
+      <b>OK</b>. The map will be calculated and displayed.
+
+    </p>
+    <p>The display table will then look like this:
+      <br><img class="shrinktoprint" border="0"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_map_gui.gif" alt="tutorial_map_gui"><br>
+      There are rows for the loaded coordinate and map data and also a row for a <i>Crystal</i>.
+      The display style is 'Continuous crystal' by default; to understand
+      this try holding down the middle mouse button and
+      dragging around the screen - the map will update automatically to cover the
+      area at the centre of the screen and symmetry related models will appear when
+      necessary. (If the symmetry models do not appear then look at the menu
+      labelled <b>Crystal contents</b> and make sure that the <i>toxd</i> is checked
+      'on').
+      <br><img class="shrinktoprint" border="0" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_map.jpg"
+        alt="tutorial_map"><br>
+    </p>
+
+    <p>For the map display object the contour level has a slider which can be
+      used to changed the contouring level. The scale is in an absolute scale of
+      electrons/A<sup>3</sup> but this can be changed to sigma levels
+      (and other defaults can be changed) in <b>Map</b> options
+      on the <b>Preferences</b> window (access this from the <b>Tools</b> pull-down
+      menu).</p>
+  </a><a name="images">
+    <h3>Better map representation for making images</h3>
+    <p>The map display style can be changed by clicking the display object icon
+      <img border="0" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/MapDisp.gif" alt="MapDisp">, selecting
+      <b>Surface style..</b> and then selecting an alternative to the conventional default chicken-wire style.
+      <b>Cylinders</b> style is useful for creating distinct electron density maps for making images.
+    </p>
+    <p>The appearance of the map can also be improved by reducing the map
+      grid size. If you loaded data from a map file then the grid size is
+      fixed in the file but
+      if you loaded data from an MTZ file then try clicking on the map icon
+      and then select <b>Sampling rate</b> from the menu. Try resetting the grid size to 0.5 - there will be a short
+      delay whilst the map is recalculated.</p>
+    <p>Another way to simplify an image is to show just the map around the
+      features of interest and clip out extraneous density. To demonstrate
+      this first create an new display object for the <i>toxd</i> model
+      (click on the model icon and select <b>Add model display object</b>) and
+      then select a small number of residues using the selection browser. Displaying these residues in <b>Cylinders</b>
+      style
+      will improve the picture. You may need to find these residues on the
+      display by choosing <b>Centre on</b> from the display object icon menu
+      <img border="0" height="32" width="32" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/MolDisp.gif"
+        alt="MolDisp">.
+      <br>Now to display just the density around these residues click on
+      the map Extent menu and select <b>Clip..</b> and <b><i>the selected residues</i></b>.
+      <br><img class="shrinktoprint" border="0"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_map_clipped.jpg" alt="tutorial_map_clipped"><br>
+    </p>
+
+  </a><a name="packing">
+    <h3>Packing diagrams</h3>
+    <p>To show the packing of the molecule in the crystal first hide the map by unchecking <b>Visible</b> from the map
+      display icon menu and then change the <i>Crystal</i> Display style from 'Continuous crystal' to <b>Contents of one
+        unit cell</b>. All the symmetry models necessary to fill a unit cell will be displayed. The <b>Cell edges</b>
+      can also be toggled on from the <i>Crystal</i> Display style menu. The image may be clearer if you change the atom
+      selection for the <i>toxd</i> model to <b>CA trace</b>. Clicking on the <img class="icon"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_map_crystal_icon.jpg" alt="crystal icon"> icon of
+      the crystal object and selecting <b>Align view on</b> will allow you to align the view on a particular crystal
+      plane.
+      <br><img class="shrinktoprint" border="0"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_map_unit_cell.jpg"
+        alt="tutorial_map_unit_cell"><br>
+    </p>
+
+    <hr>
+    <h2>Molecular surfaces</h2>
+
+  </a><a name="colouring">
+    <h3>Creating and colouring a surface</h3>
+    <p>Load a small protein such as <i>1df7</i> (small so calculations are quick). There are two ways to create a
+      surface:</p>
+    <ul>
+      <li>In the Display Style menu of a model display object select <b>Surface</b></li>
+
+      <li>Click on the model icon (<img border="0" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/MolData.gif"
+          alt="MolData" class="icon">) and from the menu
+        select <b>Add display object</b> and <b>Surface</b> to create a surface display object.
+        This approach gives you more options.
+        <br><img border="0" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_surface_display_table.jpg"
+          alt="tutorial_surface_display_table"><br>
+      </li>
+    </ul>
+
+    <p>The three columns in the Surface row of the display table are the
+      selection of atoms covered by the surface, the selection of context
+      atoms (explained below) and the colour scheme. Calculating a surface may take a little time so when you create a
+      surface
+      display object it is not drawn immediately - you have the chance to select
+      the atoms to be covered by the surface and then you should click on the
+      surface display object icon <img border="0"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/SurfaceDispobj.jpg" alt="SurfaceDispobj" class="icon">
+      and select show (or use the short cut of clicking it
+      with the right mouse button). </p>
+    <p>Most of the items on the surface Colour Scheme menu are the same as those
+      on the model colour scheme menu - the surface will just be coloured the same
+      as the underlying atom. The extra option at the top of the menu are to colour
+      by electrostatic potential (try it).</p>
+  </a><a name="selecting">
+    <h3>Covering a limited set of atoms</h3>
+    <p>For example to create a transparent surface over just the binding site for the MTX ligand
+      <br><img class="shrinktoprint" border="0"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_surface_active_site.jpg"
+        alt="tutorial_surface_active_site"><br>
+    </p>
+    <p>First select the atoms to be covered by the surface:
+      from the surface Atom Selection menu select <b>Selection
+        bowser..</b> and at the top of the new selection browser window choose
+      <b>neighbours</b> selection mode. and in the <i>atom selection</i>
+      line of the window select the monomer <i>//501(MTX)</i>. Note that the
+      selection radius is set quite high to 7A and that, by default, solvent and
+      the named central atoms (that is the MTX ligand) are excluded from the
+      selection. Hit the <b>Select neighbours</b> button. If you draw the surface now it will
+      completely wrap around all of the selected atoms as if they were a single
+      separate molecule. To prevent this go to the menu in the second column
+      to select the context for the surface and select <b>All
+        peptide</b>.
+    </p>
+    <p><img border="0" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/SurfaceDispobj.jpg" alt="SurfaceDispobj"
+        class="icon">
+      Now click
+      on the surface display icon and check <b>Visible</b>.
+      Click on the surface display object icon and select
+      <b>Surface drawing style</b>. Try the various options.
+      The opacity of the transparent surface can be changed by selecting
+      <b>Set transparency</b> from the menu, settting the opacity
+      for the surface object to say 0.4.
+    </p>
+    <p>To get the image in the picture you need to add a display object to
+      show the ligand MTX so the display table is ..
+      <br><img class="shrinktoprint" border="0"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_surface_active_site_gui.jpg"
+        alt="tutorial_surface_active_site_gui"><br>
+    </p>
+
+    <p class="noprint">The scene can be saved to file using the <b>Render..</b> option at
+      the bottom of the file menu. For a non-stereo image the same size as
+      the CCP4mg graphics window just click the <b>Render</b> button. After
+      a short delay while the image is processed you will be asked to enter
+      the name of an image file and then the image will be displayed in a
+      new window. The output image quality will be much superior to the
+      on-screen quality.</p>
+
+  </a><a name="notes">
+    <h3>Notes</h3>
+  </a>
+  <p><a name="notes">The calculation parameters and colour scheme for electrostatic potential can be set
+      in <b>Surfaces</b> folder of the <b>Preferences</b> window (find this
+      at the bottom of the <b>Edit</b> menu or the <b>QtMG</b> menu on Macs).
+      <br><span class="noprint">More information on surfaces </span></a><a class="noprint"
+      href="https://www.ccp4.ac.uk/MG/ccp4mg_help/surfaces.html">here</a><span class="noprint">.</span></p>
+
+
+  <hr>
+  <h2>Text and Extra Images</h2>
+
+  <a name="introduction">
+    <h3>Entering Text</h3>
+    <p>There are currently two types of text ..</p>
+    <ul>
+      <li>A 2D legend that can be placed anywhere on the screen and that will not move if the view is changed. To create
+        a legend select <b>Create object</b> and <b>Legend</b> from the <b>File</b> pull-down menu.</li>
+      <li>3D annotation on a model that will move with the model. To create
+        annotation you must have a model loaded then from the model data menu
+        select <b>Add display object</b> and then from the sub-menu <b>Annotation</b>.</li>
+    </ul>
+    <p>The legend and annotation objects have many features in common - try these..
+      <br>Click on the left-hand button labelled <b>legend</b> (or <b>annotation</b>)to open a window with a text
+      editor. Type in some text. Note that you can customise the text using the <b>Underline</b>, <b>Bold</b>,
+      <b>Italic</b> buttons or <b>Colour</b> menu. Click the <b>Apply</b>
+      button to display the text in the main graphics window. By default a
+      legend is first positioned at the bottom left of the screen. Annotation
+      text is by default placed at position 0.0,0.0,0.0. If you can not
+      immediately find the annotation click on the icon <img border="0" height="32" width="32"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/Annotation.gif" alt="Annotation"> and select <b>Centre
+        on</b> from the menu; this should change the view to centre on the text.
+    </p>
+
+  </a><a name="add_annotation">
+    <h3>Add Annotation</h3>
+    <p>Probably the easiest way to add annotation to click on an atom
+      with the right mouse button and select the <b>Add annotation</b>
+      option. The <i>Add annotation</i> window appears with a text label derived
+      automatically from the id of the clicked atom. </p>
+    <img class="shrinktoprint" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/add_annotation.jpg"
+      alt="add_annotation">
+    <p>The format of the automatically derived label can be changed using
+      the <i>Annotation format..</i> section of the interface or the text
+      can just be edited manually. The text font can also be changed in this
+      window. Click <b>Apply</b> to save the annotation. Annotation set up
+      this way is automatically made the moving object (indicated by a red
+      cross on the displat table) so you can now move the annotation to the
+      required position as described below.</p>
+
+
+  </a><a name="moving">
+    <h3>Moving Text</h3>
+  </a>
+  <p><a name="moving">From the icon menu try selecting <b>Move object</b>. A red cross appears by the icon to indicate
+      that this is the active moving object. To move the text hold down the <i>x</i> key and the middle mouse button and
+      drag the text.
+
+    </a><a name="images"></a></p>
+  <h3><a name="images">Adding Other Images</a></h3><a name="images">
+    <p>CCP4mg can load and display images in a variety of format including
+      PNG,GIF and JPG and also SVG. The image can be scaled and moved around
+      the screen. This option might be useful for displaying a logo or, say, a
+      graph.
+      <br>From the <b>File</b> pull-down menu use the <b>Open data file..</b> file browser and select the file
+      <i>weblogo175.gif</i>.
+      The CCP4 logo will appear at the bottom left of the display window. The
+      image is represented on the display table by a line containing a slider
+      that controls the image scale and a button to open a window to control
+      its position. The image can also be moved by clicking on the <img border="0" height="32" width="32"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/Image_dispobj.gif" alt="Image"> icon and selecting <b>Move
+        object</b>.
+      Moving the image is then the same as for moving text as described
+      above. Note that this image has a transparent background and this is
+      probably a desirable feature for many images that you might want to
+      display.
+    </p>
+
+    <hr>
+    <h2>Presentation graphics</h2>
+
+    <!--
+    <p><b>Note:</b> If you have a packing diagram set up after the Maps tutorial then this is a good example to output in PostScript format so go <a href="#postscript" target="_self">here</a> first.</p>
+    -->
+
+  </a><a name="intro">
+    <h3>Things to consider before making a picture</h3>
+    <p>Once you have set up the picture on the screen things you might want to check:</p>
+    <ul>
+      <li>The appearance of ribbons, cylinders etc. can be changed in the <b>Preferences</b> window (accessed from the
+        <b>Edit</b> menu); click on the <b>Model display</b> folder and choose <b>Model drawing style</b>.
+        If necessary you can set these drawing style parameters for individual
+        graphical objects - from the model display object icon menu select <b>Custom drawing style..</b>.
+      </li>
+      <li>Is the background colour appropriate? Look at the <b>Display</b> menu <b>Background colour</b>.</li>
+      <li>Is the fog level appropriate? The depth queue fog can be toggled on or off from the <b>Display</b> menu
+        <b>Depth queue fog</b> or the fog level changed using the <b>Clip and fog details</b> option on the
+        <b>Display</b> menu.
+      </li>
+      <li>Usually the output image will have the same pixel resolution as the
+        display window so choose an appropriate window size and ratio. Note that
+        images to be put into printed publications need to be saved at much
+        higher resolution such as 1000x1000 pixels which implies a bigger image.
+        To get high resolution images it is recommended to save at twice the
+        screen size (see later notes on rendering).</li>
+      <li>When outputting an image file the program automatically saves the
+        program status to a file with the image file name and the extension <i>.pkl</i>. If the image needs changing
+        later the status file can be loaded via the <b>Restore..</b> option on the <b>File</b>
+        pull-down menu. A good reason for annotating images within CCP4mg
+        rather than adding labels afterwards is that the annotation is saved and
+        will not need redoing if the image is revised.</li>
+      <li>Is the lighting appropriate? It is also useful to try moving/editing light sources.
+        <br>The lights can be changed from the <b>Lighting</b> interface
+        which is accessed via the <b>Display</b> menu. By default there is one
+        light source turned on. Up to 8 light sources are possible. Each light can
+        be selected from the menu at the top and individually turned on/off.
+
+        <br>
+        <img border="0" width="550" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/lighting.png" alt="lighting">
+
+        <br>The light position can be moved around the display by
+        holding down the left mouse button and moving the mouse in the sphere picture
+        in the bottom right. This simulates moving the light around a
+        hemispherical surface centred on the graphics window rotation centre.
+
+        <br>
+        The sliders scale the diffuse, specular and ambient components of the
+        light. The red, green and blue components of each of these can be altered
+        by pressing on the coloured button beside the slider.
+        <br>
+        <br>
+        <b>Shadows</b> can be used to add realism to a scene by
+        accentuating the sense of depth. The check box on lighting menu turns them
+        on and off. <b>Occlusion</b> is a method of darkening more buried parts of structure.
+
+      </li>
+    </ul>
+  </a><a name="render">
+    <h3>Render</h3>
+    <p>Set up any picture - if you have nothing already try loading <i>rnase.pdb</i> and choosing one of the ribbons
+      styles from the Picture Wizard at the top of the file browser window.</p>
+    <p>A rendered image can be output in a variety of formats; from the <b>File</b> menu select <b>Render</b> click the
+      <b>Render</b> button. After a while you will be required to enter a file name. A window should appear displaying
+      the new image.
+    </p>
+  </a>
+  <p><a name="render">Now try the options for ray tracing and stereo
+      images. Note that for ray-traced shadows to be visible you will need to
+      have a light source somewhere in front of the molecule so that shadows
+      from elements of structure at the front of the model appear on elements
+      of structure further back.<span class="noprint"> There is a button to open the </span></a><a class="noprint"
+      href="https://www.ccp4.ac.uk/MG/ccp4mg_help/lighting.html">lighting interface</a><span class="noprint"> which
+      allows moving and changing the light sources. </span></p>
+  <p>
+    Ultra smooth ribbons is nice but only sensible if you have a close up of a small section of ribbon/worm.
+  </p>
+  <p>
+    Beware! Slow in ambient occlusion method <em>really</em> means slow.
+  </p>
+  <p>
+    Some additional details to help produce images consistent with journal requirements:
+  </p>
+  <ul>
+    <li>
+      Most journals require that images have a resolution which is a minimum of a certain number of dots per inch (dpi).
+      This number only makes sense when you also know the size of the actual image on the final paper. For example your
+      image may
+      be 6 inches wide on physical paper and your journal asks for 600 dpi images. In the top left <b>Output image
+        size</b> pane
+      of the <b>Render</b> dialog select the <b>Use dpi</b> option and probably the <b>Keep graphics window aspect</b>
+      (unless you require
+      a specific height also) and set the width and dpi as appropriate.
+    </li>
+    <li>When stereo pairs are required the width setting should be
+      halved if one wishes a final image to be the same width as a
+      mono image. So for the dpi case above a stereo image which occupies a
+      space 6 inches wide on a page should have a width setting of
+      3 inches. However, in the case where a journal specifies a stereo
+      separation as a certain number of inches, then that number should
+      be used for the image size.
+    </li>
+  </ul>
+
+  <a name="screenshot">
+    <h3>Screenshot</h3>
+    <p>
+      CCP4mg can now produce really nice pictures just by taking simple screenshots
+      (<b>File-&gt;Screenshot</b>) which in many cases are comparable with the
+      quality are produced by "Render" (and can be better) and produced <em>much</em> more quickly.
+    </p>
+  </a>
+  <p><a name="screenshot">
+      To produce high-quality screenshots it is necessary to make sure that shaders
+      are turned
+      on (<b>Edit/QtMG-&gt;Preferences-&gt;Display-&gt;Drawing quality</b>)</a><a class="noprint"
+      href="https://www.ccp4.ac.uk/MG/ccp4mg_help/lighting.html"> (and see lighting interface)</a>.
+
+  </p>
+  <p>
+    One thing which is particularly useful about the screenshot method is that pictures
+    with "occlusion"<a class="noprint" href="https://www.ccp4.ac.uk/MG/ccp4mg_help/lighting.html">
+      (again see lighting interface)</a> can be produced in a few seconds, rather
+    than the several hours "Render" might take.
+  </p>
+  <p>If you are zoomed in close on a small number of spheres, using the "Perfect spheres"
+    drawing style will produce much nicer images.
+  </p>
+  <p>
+    The notes about high-resolution images for journals mention in the <b>Render</b>
+    section above also apply to screenshots. In fact, low resolution images are not as well
+    anti-aliased (smoothed) with screenshots compared to "Render" so making sure the
+    resolution is high enough is more important for screenshots.
+  </p>
+  <p>Note that not all features required for high quality screenshots (shaders, ability
+    to create pictures bigger than physical screen, ability to do shadows and occlusion)
+    are available on all systems. This is due to graphics driver limitations. "Render" is
+    available on all systems.
+    <!--
+    <a name="printing"/><h3>Printing and PDF files</h3>
+    <p>PDF output works best for pictures which contain only lines such as models drawn in Bonds display style and maps in chicken-wire style but will reproduce these at very high resolution. Try setting up such a picture and will show a screenshot which can be saved to a PDF file.</p>
+    
+    -->
+    <!--
+    <a name="review"/><h3>Reviewing Images</h3>
+    <p>By default a newly created image will be displayed in the internalfile viewer. </p>
+    -->
+
+  </p>
+  <hr>
+  <h2>Superpose Proteins</h2>
+
+  <a name="load">
+    <h3>Load homologous proteins</h3>
+    <p>Select two homologous proteins such as <i>1df7</i> and <i>4dfr</i>
+      (hint to remove existing models: from the <b>Edit</b> menu select
+      <b>For all data</b> and <b>Close</b>).
+    </p>
+
+
+    <p>To set a suitable colour and display style for all models open the
+      <b>Picture wizard</b> window from the <b>Applications</b> menu. In the
+      picture wizard window select <b>colour molecule</b> from the
+      <b>bonds</b> folder in the list at the top of the window. Click the
+      <b>Create picture</b> button to redraw the scene.
+      (Note that the Picture Wizard changes are applied to all
+      <i>visible</i> models and by default any existing display objects are deleted.)
+    </p>
+
+  </a><a name="superpose">
+    <h3>Superpose by secondary structure matching</h3>
+    <p>From the <b>Applications</b> pull-down menu select <b>Superpose</b>.<br><img class="shrinktoprint" border="0"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_superpose_gui.jpg" alt=""><br>
+      In the new window check that the Superpose mode (at the top of the
+      window) is <b>Secondary structure matching(SSM)</b> and hit the <b>Superpose</b> button. The models will
+      be superposed. To show the equivalent residues and distances between CA atoms check the box labelled <b>Show
+        matchs with..</b>. </p>
+
+    <p>In the <i>Models to superpose</i> frame of the interface is a
+      column labelled <i>Show match</i>. After an SSM superposition
+      the column will contain comboboxes for each moving models.
+      The 4dfr structure contains two equivalent chains and the
+      SSM algorithm finds alternative possible matches for both chains which
+      you can review by stepping though the options in the combo box in the
+      <b>Show match</b> column.
+    </p>
+
+    <!--
+    - if you want to treat 
+    these as two separate models load two copies of <i>4dfr</i> and in the Atom 
+    selection column for the first copy select <b>Chains</b> and select 
+    chain A. Similarly select chain B for the second copy of <i>4dfr</i>. 
+    The Superpose proteins window should now list the two 4dfr models - for each
+    of them click the button labelled 'All atoms' and select <b>As display object</b> and select the name of the chain. Now click the <b>Superpose</b> button.
+    <br/><br/><img border="0" src="../images/tutorial_superpose_final.jpg"
+    alt="tutorial_superpose_final"/><br/><br/></p>
+    -->
+
+  </a><a name="binding_sites">
+    <h3>Superposing binding sites</h3>
+    <p>The SSM method gives a good global superposition
+      but sometimes localised regions can be better superposed by matching
+      only a selection of residues in the region. A better local
+      superposition can particularly help in comparing binding
+      sites. Selecting the appropriate residues to superpose may require
+      some time and thought but the <b>Match close residues</b> method is a
+      simple automatic method that is worth a try. The method requires that
+      the models are already roughly superposed and that a limited set of
+      residues are selected in the FIXED model. The algorithm matches
+      residues in the moving model that are close to the selected residues
+      in fixed model and superposes them.</p>
+    <p>The 1df7 and 4dfr structures both contain the ligand MTZ. To
+      optimise superposition of the MTZ binding site select the <i>Match close
+        residues</i> method and then for the fixed model select the MTZ
+      binding site by clicking the model selection widget lassoo <img border="0" height="16" width="16"
+        src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/lassoo.jpg" alt="lassoo"> and pick
+      <i>Neighbourhood..</i> from the menu to open a new window.
+    </p>
+    <br><img class="shrinktoprint" border="0"
+      src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_superpose_neighbourhood.jpg"
+      alt="tutorial_superpose_neighbourhood"><br>
+    <p></p>
+    <p>In the new window select the MTZ ligand as the centre of the
+      neighbourhood and click the <i>Select neighbours</i> botton. This
+      window closes and the seelction command appears in the main Superpose window.
+      You can see which residues have been selected by checking the box
+      labelled <i>Highlight selected atoms</i>. Now click the <i>Superpose</i>
+      button to superpose the close residues. There will be only a slight
+      movement to optimise the superposition of the binding site.</p>
+
+  </a><a name="ligand">
+    <h3>Superposing the ligand</h3>
+    <p> This part of the tutorial introduces the tools for
+      manually defined matches and uses these tools to superpose equivalent
+      ligands.
+    </p>
+    <p>Click on the <i>User defined matches</i> method. The window will
+      change significantly to show a <i>User defined matches</i> frame.</p>
+    <br><img class="shrinktoprint" border="0"
+      src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/superpose_interactive.jpg" alt="superpose_interactive"><br>
+    <p>At
+      the top of this frame is a list box of the defined matches that is initially
+      empty except for a <i>New match..</i> option. To the right of the list
+      is a set of buttons with tools to edit the match list. Beneath the
+      list are tools for specifying one match. There are various modes for
+      a match: atom, residue, residue range, monomer etc. and the selection
+      widget will be changed appropriately for each match mode. From the
+      combo box labelled <i>match mode</i> select <i>monomer</i>. Use the
+      selection widgets to select the
+      MTX ligand for 1df7 (// /501[MTX] - beware the chain does not have a
+      name) and 4dfr (A/160[MTX]). You must click the <i>Save this match</i>
+      button to get this match saved to the list. The matches between the two
+      MTX molecules should be shown on the display. You can now click
+      <i>Superpose</i> to superpose the two ligands.
+    </p>
+    <p>The matching algorithm for monomers is capable of finding the
+      equivalent atoms in non-identical molecules. It uses a graph matching
+      approach which looks at the atom element types and the bonds between
+      the atoms. It takes no account of the atom names.</p>
+    <p>Further matches can be added using the interface or they can be
+      selected by clicking on atoms in the model with right mouse button and
+      using the Superpose options which appear at the bottom of the popup
+      menu. Try using the menu item <i>Superpose - select this</i> -&gt;
+      <i>Residue</i> to select an active site residue then click on the
+      equivalent residue in the other model and the menu should now include
+      <i>Superpose - match this to</i> with a list of unmatched items in the
+      other model.
+    </p>
+    <p>Matches selected by clicking on the model are shown in the match
+      list and can be edited. A possible useful feature is the ability to
+      switch off a match: click on the match in the list to make it the
+      edited match then uncheck the box labelled <i>Use match</i> and
+      remember to click the <i>Save match</i> button. The inactive matches
+      are shown greyed-out in the match list.</p>
+
+    <hr>
+    <h2>Investigating a Structure</h2>
+
+
+  </a><a name="introduction">
+    <h3>Introduction</h3>
+  </a>
+  <p><a name="introduction">Load any molecule of interest to you or use any one from the tutorial. It is easiest to work
+      if the <i>Display style</i> is <i>Bonds</i> or <i>Fat bonds</i>.If you want to look at two or more homologous
+      structures then the structures can be superposed<span class="noprint"> - see the </span></a><a class="noprint"
+      href="https://www.ccp4.ac.uk/MG/ccp4mg_help/tutorial/superpose.html">Protein Superposition tutorial</a>.
+
+
+    <a name="geometry"></a>
+  </p>
+  <h3><a name="geometry">Geometry</a></h3><a name="geometry">
+    <p>This section introduces some basic tools for interrogating the structure. From the <b>Application</b> menu select
+      <b>Geometry</b>.
+    </p>
+    <br><img class="shrinktoprint" border="0"
+      src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_geometry_gui.jpg" alt="tutorial_geometry_gui"><br>
+
+    <p>Double-click on atoms with the left mouse button to see them listed
+      in the Geometry window. The window lists: the distance between an atom
+      and the previously clicked atom; the bond angle between an atom and the
+      two preceeding atoms and the torsion angle defined by the atom and the
+      three preceeding atoms. Shift+double-click will start a new "tree" of
+      selections. i.e. the atom's distance to the previous one will not be
+      shown.</p>
+    <!--
+    <p>Try clicking on an atom with the right mouse button and select the option <b>Contacts around this..</b> and <b>residue</b> which will show close contacts around the selected residue (note that there might not be any close contacts).  The cutoff distances for close contacts can be changed in the <i>Geometry</i> applications <i>Preferences</i> window which can be accessed by clicking, with the RIGHT mouse button on the <b>Geometry</b> title and selecting <b>Preferences</b> from the menu.</p>
+    -->
+    <p>The <b>Clear</b> button will clear the list and the displayed lengths.</p>
+
+    <!--
+    <p>If you want to include the contacts in an output image you may want to have more options on display style. This is possible if you export the contacts as vectors using the <b>Export vector</b> button - see <a href="#vectors">Displaying vectors</a></p>
+    -->
+
+  </a><a name="hbonds">
+    <h3>Hydrogen Bonds</h3>
+    <p><img class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/display_table_MolData.jpg" alt="MolData"
+        height="20" width="20">To display the hydrogen bonds within the loaded model click on the model icon and select
+      the <b>Add display object..</b> .. <b>Hydrogen bonds</b>. Note also the <b>Close contacts</b>
+      option on the same menu that has a very similar interface to the
+      hydrogen bond interface that we are about to look at. Now all hydrogen
+      bonds within the structure are displayed and, in the display table, an
+      extra line appears under the model name.</p>
+    <p> <img border="0" class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/HBonds.gif" alt="HBonds">
+      From the Hbonds icon menu select <b>Drawing style</b> and in the new window check the box labelled <i>Label with
+        distance/bond length</i>. From the Hbonds icon menu you can also select <b>List HBonds</b>
+      and the CCP4mg file viewer will open listing all of the hydrogen bonds
+      in one tab. It is possible to save such listings to a file via the <b>Save</b> option on the file viewers
+      <b>File</b> drop-down menu.
+    </p>
+    <p>Several tools show listing in the file viewer: close contacts, secondary structure and the solvent accessibility.
+    </p>
+
+    <!--
+    A couple of features of these windows are worth noting. Firstly, you can click on the <b>Save to file</b> option at the bottom of the window to save the listing to a file. Secondly if you click on an atom name (with the left mouse button) then that atom will be labelled in the main display window and if you double click on an atom name then the view will change to zoom in on that atom.</p>
+    -->
+
+    <p>It is possible to display only the hydrogen bonds between two
+      specified sets of atoms. The two sets of atoms are controlled by the
+      menus in the first two columns of the table. By default the first atom
+      selection is <i>All atoms</i>; click on this and change it to <b>Main chain</b> (in a sub-menu from
+      <i>Peptide</i>). The second set of atoms remains <i>Same as other</i> so only HBonds between main chain atoms and
+      main chain atoms are shown. Now try changing the <i>Same as other</i> to <b>Side chains</b> to see all HBonds
+      between main chain and side chain atoms.
+    </p>
+  </a>
+  <p><a name="hbonds">The criteria for HBonds can be changed in the <b>Preferences</b> window (on the <b>Edit</b>
+      pull-down menu) - look in the <b>Model analysis</b> folder for <b>Hydrogen bonds</b>.<span class="noprint"> The
+        algorithm and parameters are explained in the </span></a><a class="noprint"
+      href="https://www.ccp4.ac.uk/MG/ccp4mg_help/analysis.html#hbonds">Structure Analysis</a><span class="noprint">
+      documentation.</span></p>
+  <p>If you want to include hydrogen bonds when creating an image you may
+    want to have more options on display style or to be able to add or
+    delete some bonds. These things are possible if you export the hydrogen
+    bonds as vectors<span class="noprint"> - see </span><a class="noprint" href="#vectors">Displaying vectors</a>.</p>
+
+
+
+  <a name="vectors">
+    <h3>Displaying vectors</h3>
+    <p><img border="0" class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/HBonds.gif"
+        alt="HBonds">Generate a vector file
+
+      by clicking on the Hbond display object icon and selecting <b>Export vectors</b>.
+
+    </p>
+    <p>In the file selection window enter the name for a vector file and make sure that the <b>Read exported vector file
+        into CCP4mg</b> checkbox (at the top of the window) is checked on. When you click the <b>Save</b>
+      button the display window should not change significantly but a new
+      vector object should be listed in the display window. The HBonds have
+      been written to a file and then that file has been loaded and displayed
+      in a similar style to the original data. To avoid confusion with the
+      original data either delete or hide the original HBonds.</p>
+    <p><img border="0" class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/VectorsDispobj.jpg"
+        alt="VectorsDispobj">Now
+      look at the new vector object in the display table and click on the
+      right button (the button is probably labelled 'complement dashed') to
+      open a window controlling the display style of the vectors. For example
+      style <b>dashed cylinder</b> works well if your model is displayed as cylinders or ball and stick. You may want to
+      change the <i>cylinder radius</i> and <i>dash length</i>.</p>
+    <p>Also try changing options in the <i>Labels</i> section.</p>
+    <p><img border="0" class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/VectorsData.jpg"
+        alt="VectorsData">From the Vector data icon menu select <b>Edit vectors</b>
+      to open a window with tools to edit the vector.
+
+      At the top of the new window is a list of the current vectors
+      representing hydrogen bonds. Clicking on an item in this list will load
+      that vector into the edit tools in the rest of the window. The tools
+      show the selection for the start and end atom and the annotation that
+      appears by the vector. This interface can be used to add or delete
+      'hydrogen bond' vector.</p>
+  </a>
+  <p><a name="vectors">After changing the vectors it is possible to
+      save the changes to the vector file. (Note that, unlike say model
+      coordinate files and map files the vector file contains information on
+      how you would like the data to be displayed). To see the format of a
+      vector file.
+      <br><img border="0" class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/VectorsData.jpg"
+        alt="VectorsData">From the Vector data icon menu select <b>List data</b> to open a file viewer listing the
+      vectors and their appearance<span class="noprint"> (the format is explained in the </span></a><a class="noprint"
+      href="https://www.ccp4.ac.uk/MG/ccp4mg_help/vector.html">Vector documentation</a><span class="noprint">)</span>.
+  </p>
+
+  <a name="sas">
+    <h3>Solvent Accessibility Surface</h3>
+  </a>
+  <p><a name="sas">The solvent accessible surface area is the surface
+      area that is accessible to a 'water molecule'. In calculations the
+      'water molecule' is usually represented by a sphere of about 1.4Å radius<span class="noprint"> (see </span></a><a
+      class="noprint" href="https://www.ccp4.ac.uk/MG/ccp4mg_help/analysis.html#sas">Analysis documentation</a><span
+      class="noprint">)</span>. To colour a model by the SAS area: from the <i>Colour scheme</i> menu select <b>Residue
+      property</b> and then <b>Residue solvent access</b>.
+    There may be a short pause for the calculation and then the model is
+    coloured with mostly blue on the inside of the model and red residues on
+    the outside of the model.
+    <!--
+    To see a colour legend click on the display object icon menu  <img border="0" class="icon"  src="../images/MolDisp.gif" alt="MolDisp" height="20" width="20" />  and select <b>Add colour legend</b>. A legend appears at the bottom of the screen and an extra line also appears in the display table; it represents the legend object that can be manipulated in the same ways as any other legend object (for example click on the dot menu and select <b>Delete</b>).</p>
+    -->
+  </p>
+  <p>When the display object is coloured by some interesting chemical property the display object icon menu <img
+      border="0" class="icon" src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/MolDisp.gif" alt="MolDisp"
+      height="20" width="20"> has an item <b>List colour data</b>. This will open the file viewer listing the solvent
+    accessibility of residues and atoms. </p>
+  <p>The parameters for the SAS calculation are accessible in the <b>Preferences</b> window (on the <b>Edit</b> menu) in
+    the <b>Model analysis</b> folder <b>Solvent accessible surface</b>. There is little reason to change these but you
+    may want to change the colour coding. To do this open the <b>Model colours</b> folder in the <b>Preferences</b>
+    window and select <b>Residue solvent access</b>.</p>
+  <br><img class="shrinktoprint" border="0"
+    src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_SAS_colour_gui.jpg"
+    alt="tutorial_SAS_colour_gui"><br>
+
+  <p>The window has a table showing the parameter value and the colour for
+    that parameter value. Every residue on the display is given a colour,
+    dependent on its SAS, which is interpolated from the fixed values and
+    colours in the table. If a residue SAS falls outside the normal range of
+    values in the table then it is given one of the colours, specified at
+    the top of the window, for below or above the normal range. The 'outside
+    normal range' colours are usually contrasting the normal colours in
+    order to draw attention to outliers but they could be made the same as
+    the normal range colours. Note that any solvent in your model is
+    coloured green (or the below normal range colour) because it is usually
+    excluded from the SAS calculation and assigned a value of -1.0. </p>
+
+  <p>Note that there is also an option to colour by atom SAS: from the <i>Colour scheme</i> menu select <b>Atom
+      property</b> and then <b>Atom solvent access</b>.</p>
+
+  <hr>
+  <h2>Making Movies</h2>
+
+  <a name="introduction">
+    <h3>Introduction</h3>
+    <p>CCP4mg can create movies in animated GIF or MPEG format or the
+      screenshots written out by CCP4mg can be input to some other movie
+      creation program. Either GIF or MPEG format can be incorporated into
+      presentations such as PowerPoint but animated GIFs are more acceptable
+      on web pages. To make a movie the program outputs a series of images
+      which will be the frames of the movie and these are then compiled into
+      one movie file. If you are making a longer, more complex, movie you can
+      create several scenes which can be merged together later.</p>
+    <p>For a simple movie the only thing that moves is the camera; the
+      movement helps the user to see the 3D depth and a movie often gives a
+      better idea of the overall structure than separate, fixed viewpoints.
+      For this sort of movie you select either the required movement (e.g. a
+      rotation about the vertical axis) or choose the start and end view and
+      the program will glide between these two views.</p>
+  </a>
+  <p><a name="introduction">More complex movies can have some movement of models or changes to other properties of the
+      displayed data<span class="noprint"> (see the </span></a><a class="noprint"
+      href="https://www.ccp4.ac.uk/MG/ccp4mg_help/movies.html#transforming_objects">Movie documentation</a><span
+      class="noprint">)</span>.
+    You can set up and save the two or more displays and the movie will be
+    created to interpolate smoothly between the different displays.</p>
+  <p><span class="noprint">Before making the movie take note of the </span><a class="noprint"
+      href="https://www.ccp4.ac.uk/MG/ccp4mg_help/tutorial/images.html">hints</a><span class="noprint"> in the Images
+      tutorial. </span>Movies
+    may look impressive if there is lots on the display and lots of
+    movement but an audience will probably understand more about the
+    chemistry if the pictures are simple and the movie is slow and repeats.
+    For a presentation several short movies are probably more flexible than
+    one long movie. Remember also that many data projectors have limited
+    resolution and the maximum image size may be 600 by 600 pixels. </p>
+
+  <a name="simple">
+    <h3>Making a simple movie with moving camera</h3>
+    <p>From the <b>Applications</b> menu choose <b>Movie editor</b> and <b>New movie</b> and enter a name for the movie.
+      A directory called <i>movie_name</i>.ccp4mg_presentation
+      will be created and all files created by the movie application will be
+      saved here. The movie application window appears on the screen.</p>
+    <p>Set up a picture and make sure the model is in the centre of the
+      display. Now make a snapshot of the current display by right-mouse
+      clicking on the frame in the movie window labelled <b>Save status here</b> and select <b>Save current
+        view/display</b>
+      from the pop-up menu. A small image of the current display should
+      appear in the movie window. This snapshot is labelled 00001, and
+      subsequent snapshots will be labelled 00002, 00003 etc..</p>
+    <br><img class="shrinktoprint" border="0"
+      src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_movie_gui.jpg" alt="tutorial_movie_gui"><br>
+    <p> Beneath the image are some options; set the View to <b>rotate about y</b>. See what this does by selecting
+      <b>Preview</b> from the <b>Action</b>
+      menu. This will show you, in the main graphics window, what would
+      appear in the movie but will not record anything. You can also try other
+      options on the View menu: try setting to <b>rock</b> or <b>transform</b>. For the <b>transform</b> option you will
+      need to click on the <b>Details</b> button and in the <b>Transform details</b> section of the Details window enter
+      some transformation (for example <b>360</b> for X-rotation) and hit the <b>Apply</b> button.
+    </p>
+    <p>To record the scene select <b>Make movie in stages</b> and <b>Record frames</b> from the <b>Action</b> menu. This
+      will run through the transformation saving screenshots to files named
+      <i>movie_name</i>.ccp4mg_presentation/scene_00001/frame_00001.png
+      etc.. If screenshots are made offscreen then the main display window is
+      not necessarily updated but you will see the progress reported in the
+      top bar of the movie window. If the screenshots are NOT made offscreen
+      (the usual default) then you will see the display updated but you must
+      be careful not to obscure the main graphics window as this will corrupt
+      the picture. You can check or change how screenshots are made by going
+      to the <b>Preferences</b> and, from the <b>Images and movies</b> folder, select <b>Screenshots</b>.
+    </p>
+    <p>When recording screenshots is finished go again to the <b>Action</b> menu and select <b>Make movie in stages</b>
+      and <b>Make movie scene</b>.
+      The separate screenshots are now merged into one movie file; this can
+      take a little time, there is small window showing that the compile is
+      being done and then the resultant movie is played automatically or can
+      be played by selecting <b>Play</b> from the <b>Action</b> menu. By
+      default an animated GIF file is created and replayed in the CCP4mg file
+      viewer. Like most web browsers this will automatically play animated
+      GIFs on a continuous loop.</p>
+
+    <!--
+    The <b>Preferences</b> option on the movie window <b>Edit</b> menu has the option to change the movie format. Set the encoder to <b>mencoder</b> and the file extension to <b>.avi</b>. This will run the mencoder program (if it is installed) with the command line options shown in the Preferences window. This program can create movies in many different formats; the default creates a file with extension <i>.avi</i> which has the video in MPEG-4 format. This movie file can be replayed by mencoder's sister program <i>mplayer</i>. For more details see the <a href="www.mplayerhq.hu">mplayer website</a>.
+    </p>
+    -->
+
+    <p>Now try making the movie zoom-in from the view of the whole model to
+      focus on a ligand. First make a copy of the first, 00001 snapshot by
+      right-mouse clicking on it and selected <b>Copy</b> from the menu; then right-mouse click on the <b>Save status
+        here</b> frame and select <b>Paste</b>.
+      Now, in the main graphics window, zoom-in to a ligand - you may want
+      to rotate and translate as well to get the best possible view. Then save
+      that view by right-mouse clicking on the movie window frame labelled <b>Save status here</b> and select <b>Save
+        current view/display</b>
+      from the pop-up menu. The view of the ligand should now be displayed as
+      the third snapshot in the movie window. In the interface below the
+      second snapshot change the View menu to <b>glide to</b> and,in the new menu that appears, select <b>00003</b>.</p>
+    <br><img class="shrinktoprint" border="0"
+      src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_movie_gui1.jpg" alt="tutorial_movie_gui"><br>
+    <p>Now try <b>Preview</b>ing the scenes. You may want to slow the
+      movement down by changing the time from 2 seconds to something greater.
+      You can also change a snapshot easily, for example try changing the
+      final view zoomed-in on the ligand: first, restore the current view by
+      double clicking with the left mouse button on the zoomed-in snapshot;
+      then change the view in the main window; then go back to the zoomed in
+      snapshot in the movie window and click on it with the right mouse button
+      and select <b>Replace</b>. The snapshot in the movie window should be updated to the new view.</p>
+
+    <p>If you want to preview, record or compile just one scene then select
+      the snapshot by clicking on it with the left mouse button. It will be
+      highlighted by a cyan border and any actions will be applied to only
+      this scene.</p>
+    <!--
+    To extend this selection to a range of scenes hold down the Shift key and click on another snapshot; the range of snapshots should be highlighted in cyan.</p>
+    -->
+
+    <p>To continue the movie from here you might want to display the ligand binding site in more detail and try rocking
+      the view.</p>
+
+  </a><a name="changing_ed">
+    <h3>Making a movie with changing electron density level</h3>
+  </a>
+  <p class="noprint"><a name="changing_ed">See the movie </a><a class="noprint"
+      href="https://www.ccp4.ac.uk/MG/ccp4mg_help/images/changing_ed_movie.gif">here</a>.</p>
+  <p>Delete any loaded data (from <b>Tools</b> menu select <b>For all data</b> and <b>Delete</b>.) First close any
+    current data using the <b>Edit</b> pull-down menu option <for all="" data<="" b=""> <b>Close</b>. Then load the
+      model <b>dUTPase.pdb</b> with the picture wizard style (at the top of the file selection window) set to <b>ligand
+        binding site:site</b> and make sure the <b>Open picture wizard choices</b> box is checked. You will then see a
+      window offering a selection of ligand - choose <b>D/1(DUX)</b> from the Monomer menu and click <b>Create
+        picture</b>.
+      The picture includes some residues that are more remote from the ligand
+      shown as thin bonds - hide or delete this display object.</for>
+  </p>
+  <p>Now load the experimental data file <b>dUTPase.mtz</b>. After selecting the experimental data file there is a
+    window in which you should select the data <i>F_pf868_P41</i> and <i>PHICalc</i>
+    and also choose a finer grid size, such as 0.5Å. Probably after the
+    experimental data is loaded there will be several symmetry copied of the
+    model displayed; since these do not help in making this picture they
+    can be switched off by going to the initial line in the Display Table,
+    the <i>Crystals</i> object, and in the third column change <i>Continuous crystal</i> to <b>Symmetry off</b>.</p>
+  <p>To display only a limited region of map, that covers the selected
+    ligand atoms, go to the first column in the map display object line
+    (currently labelled <i>Extent 10.0</i>) and select from the menu <b>Clip..</b> and <b>to dUTPase D/1(DUX)</b>. The
+    map will now be clipped to the selected atoms.</p>
+  <p>We want to make a movie in which the electron density contouring
+    alternates smoothly between two contour levels. To define the two
+    extreme contour levels you need to save snapshots at the two extreme
+    positions. So first choose a low contour level (use the slider bar on
+    the right side of the map contour line in the Display Table) and then
+    right-mouse click on the <b>Insert next snapshot here</b> and select <b>Insert current view/display</b> from the
+    pop-up menu and then set the high contour level and make a snapshot of that too.</p>
+
+  <p>In the interface below the first electron density snapshot:
+    <br>choose a time period for the recording - <b>3</b> seconds is reasonable.
+    <br>set the View mode to <b>Glide to</b> and the frame number to 00002 (or the id of the second frame)
+    <br>Click on the <b>Details</b> button and in the details window check the box labelled <b>Rock back to initial
+      position</b>.
+    This will cause the electron density level displayed in the movie to
+    oscillate between the two extreme values that you have set in the
+    snapshots.
+    <br>select the range of snapshots to preview/record by clicking on the
+    first with left mouse button then, holding down the Shift key, clicking
+    on the second snapshot. The two electron density snapshots should now be
+    highlighted in gold.
+  </p>
+  <br><img class="shrinktoprint" border="0"
+    src="CCP4%20Molecular%20Graphics%20-%20Tutorial_files/tutorial_movie_gui2.jpg" alt="tutorial_movie_gui"><br>
+  <p>Select <b>Preview</b> from the <b>Action</b> menu to see the result.
+    The display should rock slowly and the contour level should gradually
+    change. If you are happy click the <b>Record</b> button. You may want to try changing the time or rock parameters
+    (in the Details window).</p>
+
+  <hr>
+
+</div>
