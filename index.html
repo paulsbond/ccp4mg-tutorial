@@ -19,6 +19,62 @@
         <li><a href="#1.3">Loading a PDB/mmCIF file</a></li>
         <li><a href="#1.4">Changing the view</a></li>
         <li><a href="#1.5">Finding things in the molecule</a></li>
+        <li><a href="#1.6">1.6. The Display Table and Picture Wizard</a></li>
+        <li><a href="#1.6">1.7 Creating a model display object</a></li>
+        <li><a href="#1.6">Creating hydrogen bonds</a></li>
+      </ol>
+    </li>
+    <li><a href="#2">Electron density maps</a>
+      <ol>
+        <li><a href="#2.1">Loading a map and model</a></li>
+        <li><a href="#2.2">Better map representation for making images</a></li>
+        <li><a href="#2.3">Packing diagrams</a></li>
+      </ol>
+    </li>
+    <li><a href="#3">Molecular surfaces</a>
+      <ol>
+        <li><a href="#3.1">Creating and colouring a surface</a></li>
+        <li><a href="#3.2">Covering a limited set of atoms</a></li>
+        <li><a href="#3.3">Notes</a></li>
+      </ol>
+    </li>
+    <li><a href="#4">Text and Extra Images</a>
+      <ol>
+        <li><a href="#4.1">Entering Text</a></li>
+        <li><a href="#4.2">Add Annotation</a></li>
+        <li><a href="#4.3">Moving Text</a></li>
+        <li><a href="#4.4">Adding Other Images</a></li>
+      </ol>
+    </li>
+    <li><a href="#5">Presentation graphics</a>
+      <ol>
+        <li><a href="#5.1">Things to consider before making a picture</a></li>
+        <li><a href="#5.2">Render</a></li>
+        <li><a href="#5.3">Screenshot</a></li>
+      </ol>
+    </li>
+    <li><a href="#6">Superpose Proteins</a>
+      <ol>
+        <li><a href="#6.1">Load homologous proteins</a></li>
+        <li><a href="#6.2">Superpose by secondary structure matching</a></li>
+        <li><a href="#6.3">Superposing binding sites</a></li>
+        <li><a href="#6.4">Superposing the ligand</a></li>
+      </ol>
+    </li>
+    <li><a href="#7">Investigating a Structure</a>
+      <ol>
+        <li><a href="#7.1">Introduction</a></li>
+        <li><a href="#7.2">Geometry</a></li>
+        <li><a href="#7.3">Hydrogen Bonds</a></li>
+        <li><a href="#7.4">Displaying vectors</a></li>
+        <li><a href="#7.5">Solvent Accessibility Surface</a></li>
+      </ol>
+    </li>
+    <li><a href="#8">Making Movies</a>
+      <ol>
+        <li><a href="#8.1">Introduction</a></li>
+        <li><a href="#8.2">Making a simple movie with moving camera</a></li>
+        <li><a href="#8.3">Making a movie with changing electron density level</a></li>
       </ol>
     </li>
   </ol>
@@ -176,7 +232,7 @@
     the window or hitting the <i>Esc</i> button.
   </p>
 
-  <h3>1.6. The Display Table and Picture Wizard</h3>
+  <h3 id="1.6">1.6. The Display Table and Picture Wizard</h3>
   <p>
     The display table lists all of the loaded data objects
     (for example each loaded PDB, mmCIF, MTZ or map file becomes one data object).
@@ -201,7 +257,7 @@
     will make intelligent atom selections automatically.
   </p>
 
-  <h3>1.7 Creating a model display object</h3>
+  <h3 id="1.7">1.7. Creating a model display object</h3>
   <p>
     <img class="icon" src="img/display_table_MolDisp.jpg" alt="">
     It is possible to edit the the scenes created by the Picture
@@ -283,7 +339,7 @@
     tab.
   </p>
 
-  <h3>Creating hydrogen bonds</h3>
+  <h3 id="1.8">1.8. Creating hydrogen bonds</h3>
   <p>
     <img class="icon" src="img/display_table_HBonds.jpg" alt="">
     The current display objects are (probably) all
@@ -311,9 +367,9 @@
     try the options in the new window.
   </p>
 
-  <h2>Electron density maps</h2>
+  <h2 id="2">2. Electron density maps</h2>
 
-  <h3>Loading a map and model</h3>
+  <h3 id="2.1">2.1. Loading a map and model</h3>
   <p>
     Load the coordinate file <i>toxd.pdb</i> with the picture wizard
     style set to <b>Bonds : all atoms</b>. Then load
@@ -345,7 +401,7 @@
     menu).
   </p>
 
-  <h3>Better map representation for making images</h3>
+  <h3 id="2.2">2.2. Better map representation for making images</h3>
   <p>The map display style can be changed by clicking the display object icon
     <img class="icon" src="img/MapDisp.gif" alt="">, selecting <b>Surface style..</b>
     and then selecting an alternative to the conventional default chicken-wire style.
@@ -379,7 +435,7 @@
   </p>
   <img src="img/tutorial_map_clipped.jpg" alt="">
 
-  <h3>Packing diagrams</h3>
+  <h3 id="2.3">2.3. Packing diagrams</h3>
   <p>
     To show the packing of the molecule in the crystal
     first hide the map by unchecking <b>Visible</b> from the map
@@ -397,9 +453,9 @@
   </p>
   <img src="img/tutorial_map_unit_cell.jpg" alt=""><br>
 
-  <h2>Molecular surfaces</h2>
+  <h2 id="3">3. Molecular surfaces</h2>
 
-  <h3>Creating and colouring a surface</h3>
+  <h3 id="3.1">3.1. Creating and colouring a surface</h3>
   <p>
     Load a small protein such as <i>1df7</i> (small so calculations are quick).
     There are two ways to create a surface:
@@ -432,7 +488,7 @@
     by electrostatic potential (try it).
   </p>
 
-  <h3>Covering a limited set of atoms</h3>
+  <h3 id="3.2">3.2. Covering a limited set of atoms</h3>
   <p>
     For example to create a transparent surface
     over just the binding site for the MTX ligand
@@ -477,7 +533,7 @@
     on-screen quality.
   </p>
 
-  <h3>Notes</h3>
+  <h3 id="3.3">3.3. Notes</h3>
   <p>
     The calculation parameters and colour scheme for electrostatic potential can be set
     in <b>Surfaces</b> folder of the <b>Preferences</b> window (find this
@@ -487,9 +543,9 @@
     </a>
   </p>
 
-  <h2>Text and Extra Images</h2>
+  <h2 id="4">4. Text and Extra Images</h2>
 
-  <h3>Entering Text</h3>
+  <h3 id="4.1">4.1. Entering Text</h3>
   <p>There are currently two types of text ..</p>
   <ul>
     <li>
@@ -520,7 +576,7 @@
     this should change the view to centre on the text.
   </p>
 
-  <h3>Add Annotation</h3>
+  <h3 id="4.2">4.2. Add Annotation</h3>
   <p>
     Probably the easiest way to add annotation to click on an atom
     with the right mouse button and select the <b>Add annotation</b>
@@ -538,14 +594,14 @@
     required position as described below.
   </p>
 
-  <h3>Moving Text</h3>
+  <h3 id="4.3">4.3. Moving Text</h3>
   <p>
     From the icon menu try selecting <b>Move object</b>.
     A red cross appears by the icon to indicate that this is the active moving object.
     To move the text hold down the <i>x</i> key and the middle mouse button and
     drag the text.
 
-  <h3>Adding Other Images</h3>
+  <h3 id="4.4">4.4. Adding Other Images</h3>
   <p>
     CCP4mg can load and display images in a variety of format including
     PNG,GIF and JPG and also SVG. The image can be scaled and moved around
@@ -568,9 +624,9 @@
     display.
   </p>
 
-  <h2>Presentation graphics</h2>
+  <h2 id="5">5. Presentation graphics</h2>
 
-  <h3>Things to consider before making a picture</h3>
+  <h3 id="5.1">5.1. Things to consider before making a picture</h3>
   <p>Once you have set up the picture on the screen things you might want to check:</p>
   <p>
     The appearance of ribbons, cylinders etc.
@@ -637,7 +693,7 @@
     <b>Occlusion</b> is a method of darkening more buried parts of structure.
   </p>
 
-  <h3>Render</h3>
+  <h3 id="5.2">5.2. Render</h3>
   <p>
     Set up any picture - if you have nothing already try loading <i>rnase.pdb</i>
     and choose one of the ribbons styles
@@ -696,7 +752,7 @@
     </li>
   </ul>
 
-  <h3>Screenshot</h3>
+  <h3 id="5.3">5.3. Screenshot</h3>
   <p>
     CCP4mg can now produce really nice pictures just by taking simple screenshots
     (<b>File/Screenshot</b>) which in many cases are comparable
@@ -733,9 +789,9 @@
     "Render" is available on all systems.
   </p>
 
-  <h2>Superpose Proteins</h2>
+  <h2 id="6">6. Superpose Proteins</h2>
 
-  <h3>Load homologous proteins</h3>
+  <h3 id="6.1">6.1. Load homologous proteins</h3>
   <p>
     Select two homologous proteins such as <i>1df7</i> and <i>4dfr</i>
     (hint to remove existing models: from the <b>Edit</b> menu select
@@ -751,7 +807,7 @@
     <i>visible</i> models and by default any existing display objects are deleted.)
   </p>
 
-  <h3>Superpose by secondary structure matching</h3>
+  <h3 id="6.2">6.2. Superpose by secondary structure matching</h3>
   <p>
     From the <b>Applications</b> pull-down menu select <b>Superpose</b>.
   </p>
@@ -774,7 +830,7 @@
     <b>Show match</b> column.
   </p>
 
-  <h3>Superposing binding sites</h3>
+  <h3 id="6.3">6.3. Superposing binding sites</h3>
   <p>
     The SSM method gives a good global superposition
     but sometimes localised regions can be better superposed by matching
@@ -807,7 +863,7 @@
     movement to optimise the superposition of the binding site.
   </p>
 
-  <h3>Superposing the ligand</h3>
+  <h3 id="6.4">6.4. Superposing the ligand</h3>
   <p>
     This part of the tutorial introduces the tools for
     manually defined matches and uses these tools to superpose equivalent
@@ -859,9 +915,9 @@
     are shown greyed-out in the match list.
   </p>
 
-  <h2>Investigating a Structure</h2>
+  <h2 id="7">7. Investigating a Structure</h2>
 
-  <h3>Introduction</h3>
+  <h3 id="7.1">7.1. Introduction</h3>
   <p>
     Load any molecule of interest to you or use any one from the tutorial.
     It is easiest to work if the <i>Display style</i> is
@@ -873,7 +929,7 @@
     </a>.
   </p>
 
-  <h3>Geometry</h3>
+  <h3 id="7.2">7.2. Geometry</h3>
   <p>
     This section introduces some basic tools for interrogating the structure.
     From the <b>Application</b> menu select <b>Geometry</b>.
@@ -890,7 +946,7 @@
   </p>
   <p>The <b>Clear</b> button will clear the list and the displayed lengths.</p>
 
-  <h3>Hydrogen Bonds</h3>
+  <h3 id="7.3">7.3. Hydrogen Bonds</h3>
   <p>
     <img class="icon" src="img/display_table_MolData.jpg" alt="">
     To display the
@@ -941,7 +997,7 @@
     bonds as vectors.
   </p>
 
-  <h3>Displaying vectors</h3>
+  <h3 id="7.4">7.4. Displaying vectors</h3>
   <p>
     <img class="icon" src="img/HBonds.gif" alt="">
     Generate a vector file by clicking on the Hbond display object icon
@@ -995,7 +1051,7 @@
       Vector documentation</a>).
   </p>
 
-  <h3>Solvent Accessibility Surface</h3>
+  <h3 id="7.5">7.5. Solvent Accessibility Surface</h3>
   <p>
     The solvent accessible surface area is the surface
     area that is accessible to a 'water molecule'. In calculations the
@@ -1042,9 +1098,9 @@
     from the <i>Colour scheme</i> menu select <b>Atom property</b>
     and then <b>Atom solvent access</b>.</p>
 
-  <h2>Making Movies</h2>
+  <h2 id="8">8. Making Movies</h2>
 
-  <h3>Introduction</h3>
+  <h3 id="8.1">8.1. Introduction</h3>
   <p>
     CCP4mg can create movies in animated GIF or MPEG format or the
     screenshots written out by CCP4mg can be input to some other movie
@@ -1080,7 +1136,7 @@
     resolution and the maximum image size may be 600 by 600 pixels.
   </p>
 
-  <h3>Making a simple movie with moving camera</h3>
+  <h3 id="8.2">8.2. Making a simple movie with moving camera</h3>
   <p>
     From the <b>Applications</b> menu choose <b>Movie editor</b> and <b>New movie</b>
     and enter a name for the movie.
@@ -1173,7 +1229,7 @@
     display the ligand binding site in more detail and try rocking the view.
   </p>
 
-  <h3>Making a movie with changing electron density level</h3>
+  <h3 id="8.3">8.3. Making a movie with changing electron density level</h3>
   <p>
     See the movie
     <a href="https://www.ccp4.ac.uk/MG/ccp4mg_help/images/changing_ed_movie.gif">
