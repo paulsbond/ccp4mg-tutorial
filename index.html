@@ -389,84 +389,86 @@
 
   <h3 id="2.1">2.1. Loading a map and model</h3>
   <p>
-    Load the coordinate file <i>toxd.pdb</i> with the picture wizard
-    style set to <b>Bonds : all atoms</b>. Then load
-    the CCP4 MTZ (structure factor) file <i>toxd_sfall1.mtz</i>.
-    In the new window you can select the structure factor and
-    phase data from the file - accept the defaults by clicking
-    <b>OK</b>. The map will be calculated and displayed.
+    Open the coordinate file <i>toxd.pdb</i>
+    with the picture wizard style set to <b>Bonds / All atoms</b>.
+    Then open the CCP4 MTZ (structure factor) file <i>toxd_sfall1.mtz</i>.
+    In the new window you can select the structure factor and phase data from the file
+    - accept the defaults by clicking <b>OK</b>.
+    The map will be calculated and displayed.
+    The display table will then look like this:
   </p>
-  <p>The display table will then look like this:</p>
-  <img src="img/tutorial_map_gui.gif" alt="">
+  <img src="img/map_display_table.png" alt="">
   <p>
     There are rows for the loaded coordinate and map data
     and also a row for a <i>Crystal</i>.
-    The display style is 'Continuous crystal' by default; to understand
-    this try holding down the middle mouse button and
-    dragging around the screen - the map will update automatically to cover the
-    area at the centre of the screen and symmetry related models will appear when
-    necessary. (If the symmetry models do not appear then look at the menu
-    labelled <b>Crystal contents</b> and make sure that the <i>toxd</i> is checked
-    'on').
+    The display style is 'Symmetry off' by default
+    so that only one copy of the molecule is shown.
+    You can change this to <b>Continuous crystal</b>
+    to show symmetry copies of the molecule,
+    but beware that without <b>Display / Clip front/back</b>
+    the display will be very crowded.
+    As you drag the screen around (with Shift + middle mouse button)
+    the map will update automatically to cover the
+    area at the centre of the screen.
   </p>
   <img src="img/tutorial_map.jpg" alt="">
   <p>
-    For the map display object the contour level has a slider which can be
-    used to changed the contouring level. The scale is in an absolute scale of
-    electrons/A<sup>3</sup> but this can be changed to sigma levels
-    (and other defaults can be changed) in <b>Map</b> options
-    on the <b>Preferences</b> window (access this from the <b>Tools</b> pull-down
-    menu).
+    For the map display object the contour level has a slider
+    which can be used to changed the contouring level.
+    The scale is in an absolute scale of electrons/A<sup>3</sup>
+    but this can be changed to sigma levels (and other defaults can be changed)
+    in <b>Maps</b> options in the <b>Preferences</b> window
+    (access this from the <b>Edit</b> pull-down menu).
   </p>
 
   <h3 id="2.2">2.2. Better map representation for making images</h3>
-  <p>The map display style can be changed by clicking the display object icon
+  <p>
+    The map display style can be changed by clicking the display object icon
     <img class="icon" src="img/MapDisp.gif" alt="">, selecting <b>Surface style..</b>
     and then selecting an alternative to the conventional default chicken-wire style.
-    <b>Cylinders</b> style is useful for
-    creating distinct electron density maps for making images.
+    <b>Cylinders</b> style is useful for creating distinct electron density maps
+    for making images.
   </p>
   <p>
-    The appearance of the map can also be improved by reducing the map
-    grid size. If you loaded data from a map file then the grid size is
-    fixed in the file but
-    if you loaded data from an MTZ file then try clicking on the map icon
+    The appearance of the map can also be improved by reducing the map grid size.
+    If you loaded data from a map file then the grid size is fixed in the file
+    but if you loaded data from an MTZ file then try clicking on the map icon
+    <img class="icon" src="img/map_icon.png" alt="">
     and then select <b>Sampling rate</b> from the menu.
-    Try resetting the grid size to 0.5 - there will be a short
-    delay whilst the map is recalculated.
+    Try setting the sampling rate to 0.5 and click <b>Apply</b>
+    - there will be a short delay whilst the map is recalculated.
   </p>
   <p>
-    Another way to simplify an image is to show just the map around the
-    features of interest and clip out extraneous density. To demonstrate
-    this first create an new display object for the <i>toxd</i> model
-    (click on the model icon and select <b>Add model display object</b>) and
-    then select a small number of residues using the selection browser.
-    Displaying these residues in <b>Cylinders</b> style
-    will improve the picture. You may need to find these residues on the
-    display by choosing <b>Centre on</b> from the display object icon menu
-    <img class="icon" src="img/MolDisp.gif" alt="">.
+    Another way to simplify an image is to show just
+    the map around the features of interest and clip out extraneous density.
+    To demonstrate this first create an new display object for the <i>toxd</i> model
+    (click on the model icon and select <b>Add model display object</b>)
+    and then select a small number of residues using the selection browser.
+    Displaying these residues in <b>Cylinders</b> style will improve the picture.
+    You may need to find these residues in the display by using the
+    recentre <img class="icon" src="img/recentre_icon.png" alt="">
+    or centre-on <img class="icon" src="img/centre_on_icon.jpg" alt=""> icons.
   </p>
   <p>
-    Now to display just the density around these residues click on
-    the map Extent menu and select <b>Clip..</b>
-    and <b><i>the selected residues</i></b>.
+    Now to display just the density around these residues
+    click on the map display object icon <img class="icon" src="img/MapDisp.gif" alt="">
+    and choose the residue selection from the <b>Clip</b> menu.
   </p>
   <img src="img/tutorial_map_clipped.jpg" alt="">
 
   <h3 id="2.3">2.3. Packing diagrams</h3>
   <p>
     To show the packing of the molecule in the crystal
-    first hide the map by unchecking <b>Visible</b> from the map
-    display icon menu and then change the <i>Crystal</i> Display style from
-    'Continuous crystal' to <b>Contents of one unit cell</b>.
+    first hide the map by right-clicking the map display icon.
+    Then change the <i>Crystal</i> Display style to <b>Contents of one unit cell</b>.
     All the symmetry models necessary to fill a unit cell will be displayed.
     The <b>Cell edges</b> can also be toggled on
     from the <i>Crystal</i> Display style menu.
-    The image may be clearer if you change the atom selection
-    for the <i>toxd</i> model to <b>CA trace</b>.
-    Clicking on the <img class="icon" src="img/tutorial_map_crystal_icon.jpg" alt="">
-    icon of
-    the crystal object and selecting <b>Align view on</b>
+    The image may be clearer if
+    you change the atom selection for the <i>toxd</i> model to <b>CA trace</b>.
+    Clicking on the display object icon of the Crystal object
+    <img class="icon" src="img/crystal_display_icon.png" alt="">
+    and selecting <b>Align view on</b>
     will allow you to align the view on a particular crystal plane.
   </p>
   <img src="img/tutorial_map_unit_cell.jpg" alt=""><br>
