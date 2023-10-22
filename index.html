@@ -125,6 +125,7 @@
     A window with two panes should appear:
     the large 'main window' and the small 'display table'.
   </p>
+  <img src="img/window.png" alt="">
 
   <h3 id="1.2">1.2. Copying some data to your own area</h3>
   <p>
@@ -137,34 +138,27 @@
 
   <h3 id="1.3">1.3. Loading a PDB/mmCIF file</h3>
   <p>
-    From the file pull-down select <b>Open data file</b>.
-    At the top of the <i>Open data file</i> window there is a
-    <i>picture wizard</i> menu which allows you to select the appearance
+    From the file pull-down select <b>Open</b>.
+    At the top of the <i>Open file(s)</i> window there is a
+    <i>Picture wizard</i> menu which allows you to select the appearance
     for a newly loaded model and next to the menu is a small picture
     showing an example of a model drawn in the current style. Try looking at some
     of the styles available in the menu but initially select,
-    from the <b>ribbons</b> folder,
-    <b>colour blend thru chain</b>.
+    from the <b>Ribbons</b> folder,
+    <b>Blend colour N to C terminus</b>.
     Now select a file: go to the
     <b>ccp4mg_tutorial</b> directory in your home area and select
     <b>1df7.pdb</b> or a coordinate file of your choice (preferably one
-    containing ligands). Click on the <b>Open</b> button and then close
-    the file selection window.
+    containing ligands). Click on the <b>Open</b> button.
   </p>
+  <img src="img/1df7.png" alt="">
   <p>
-    Another method is to download coordinates from one of the online PDB archives.
-    From the <b>File</b> menu select <b>Download coordinate file</b>
+    Another method is to download coordinates from one of the online archives.
+    From the <b>File</b> menu select <b>Download PDB/AFDB coordinates</b>
     and in the download window enter the 4-letter
     code for a model (e.g <b>1alz</b>).
-    If you click return in the code window then a default name for the local PDB
-    file is shown in the line below.
-    Click the <b>Apply</b> button and the file will be downloaded to your computer
-    and read into CCP4MG.
-    If you do not know the 4-letter code for the structure that you want
-    then click on the <b>View server web page</b>
-    button to bring up a web browser showing the structure database query
-    page. Once you have found the structure you want you can use either the
-    database download option or the CCP4 interface.
+    If you click <b>Download</b> or press return
+    then the file will be downloaded to your computer and read into CCP4MG.
   </p>
   <p>
     If this is the first model that you have loaded it should be in the
@@ -184,7 +178,8 @@
   <p>
     <b>Zoom</b>:
     use the mouse wheel or hold down the middle mouse button and drag up-down.
-    Zoom can also be set by hand by doing Display / show/change zoom.
+    Zoom can also be set by hand using <b>Display / Show/change zoom</b>.
+    The zoom level is then displayed in the bottom right corder of the window.
     This useful in getting the same zoom factor for different images.
   </p>
   <p>
@@ -218,22 +213,22 @@
 
   <h3 id="1.5">1.5. Finding things in the molecule</h3>
   <p>
-    <img class="icon" src="img/centre_on_icon.jpg" alt="">
-    This tool will move the view so an atom or residue of your choice
+    From the <b>View</b> pull-down menu select <b>Find/centre on..</b>
+    or click the <img class="icon" src="img/centre_on_icon.jpg" alt=""> icon
+    to move the view so an atom or residue of your choice
     is at the centre of the screen.
-    From the <b>View</b> pull-down menu select <b>Find/centre on..</b>.
-    <img src="img/tutorial_intro_centre_on.jpg" alt="">
     In the new window you can select a chain or residue(s) or atom(s)
     and click the <b>Centre on</b> button to go to the selection.
   </p>
+  <img src="img/centre_on.png" alt="">
   <p>
+    Click on the tree view icon
     <img class="icon" src="img/tree_view_icon.jpg" alt="">
-    Click on the tree view to open the tree view of the model.
-    The tree view works like a
-    file browser with the model split at the first level into peptide, monomers and
-    solvent etc.. Open the monomers folder and select one of the ligands by
-    clicking on it. Click on the <b>Centre on</b> button to go to the
-    selected ligand. The view will change to show the selected ligand.
+    to open the tree view of the model.
+    The tree view works like a file browser with the model split at the first level
+    into ligands, peptide and solvent etc..
+    Open the ligands folder and select one of the ligands by clicking on it.
+    The view should move automatically as you change the selection.
   </p>
   <p>
     The tree view selection tool is used in many parts of the program.
@@ -253,8 +248,8 @@
     for more information.
   </p>
   <p>
-    <img class="icon" src="img/tree_view_clear_icon.jpg" alt="">
-    To clear the selection click on the clear icon.
+    To clear the selection click on the clear icon
+    <img class="icon" src="img/tree_view_clear_icon.jpg" alt="">.
     The tree view can be closed by clicking elsewhere in
     the window or hitting the <i>Esc</i> button.
   </p>
@@ -264,135 +259,131 @@
     The display table lists all of the loaded data objects
     (for example each loaded PDB, mmCIF, MTZ or map file becomes one data object).
     For each data object the display objects are listed one per line.
-    You probably have one (1df7) data object
-    and several display object currently listed.
+    You probably have one data object (1df7)
+    and several display objects currently listed.
   </p>
-  <img src="img/tutorial_intro_display_table.jpg" alt="">
+  <img src="img/display_table.png" alt="">
   <p>
-    <img class="icon" src="img/display_table_MolData.jpg" alt="">
-    Usually the easiest way to set up a picture is with the Picture
-    Wizard which you saw when opening the PDB file. It can also be used to
-    change the display of a PDB file that is already loaded.
-    Click on the icon next to the name of the data object to
-    open a menu with several options including
-    <b>Picture wizard..</b> which opens a window with the picture wizard to
-    change the appearance of the model. Note the button in this window to
-    <b>Delete existing display objects</b> which should be checked to
-    clear the existing picture. You can try some of the options. Note that
-    some of the picture styles require you to select groups of atoms; for
-    example interfaces must be between two groups of atoms. Most styles
-    will make intelligent atom selections automatically.
+    Usually the easiest way to set up a picture is with the Picture Wizard
+    which you saw when opening the coordinate file.
+    It can also be used to change the display of a PDB file that is already loaded.
+    Click on the <img class="icon" src="img/display_table_MolData.jpg" alt="">
+    icon next to the name of the data object
+    to open a menu with several options including <b>Picture wizard</b>,
+    which opens a window with the picture wizard to change the appearance of the model.
+    Note the button at the top of the Picture wizard window to
+    <b>Delete any existing display object</b>,
+    which should be checked to clear the existing picture.
+    You can try some of the options.
+    Note that some of the picture styles require you to select groups of atoms;
+    for example interfaces must be between two groups of atoms.
+    Most styles will make intelligent atom selections automatically.
   </p>
 
   <h3 id="1.7">1.7. Creating a model display object</h3>
   <p>
-    <img class="icon" src="img/display_table_MolDisp.jpg" alt="">
-    It is possible to edit the the scenes created by the Picture
-    Wizard or create display objects from new. To see how to do this
-    go back to the display table.
+    It is possible to edit the the scenes created by the Picture Wizard
+    or create display objects from new.
+    To see how to do this go back to the display table.
     For each display object there is an icon and three buttons for the
     <i>Atom Selection</i>, the <i>Colour Scheme</i> and the <i>Display Style</i>
-    of the display object. Click on the icon and you
-    will see a menu with options to control (among other things) the
-    object visibility. You can also hide or show an object by
-    clicking on the icon with the right mouse button. Hide all of the
-    objects before creating a new one..
-  </p>
-  <p>
-    <img class="icon" src="img/display_table_MolData.jpg" alt="">
-    Create a new display object: click on the model object icon
-    and select <b>Add model display object</b> from the menu.
-  </p>
-  <p>
+    of the display object.
+    Click on the icon
     <img class="icon" src="img/display_table_MolDisp.jpg" alt="">
-    A new line should appear in the display table which shows that <i>all</i> of
-    the model is selected and is coloured by <i>Atom type</i> and drawn in display style
-    <i>Bonds</i>. We will look at these three items in reverse order.
-    Click on the button labelled <i>Bonds</i> and you will
-    see a menu with many options for different drawing styles - try
-    these, beware some options are not appropriate for this model and
-    nothing will be drawn. Finally select <b>Cylinders</b> before moving
-    on to click on the button labelled <i>Atom
-      type</i> to see a menu of alternative colouring schemes, try some such
-    as <b>Secondary structure</b> and <b>Residue property</b> / <b>Residue type</b>.
+    and you will see a menu with options to control
+    (among other things) the object visibility.
+    You can also hide or show an object by clicking on the icon
+    with the right mouse button.
+    Hide all of the objects before creating a new one..
   </p>
   <p>
-    To alter the selection of atoms displayed click on the button
-    labelled <b>All atoms</b>. The menu that appears has some quick selection
-    options such as <b>Peptide</b> and <b>CA trace</b>. Try the
-    <b>Selection browser..</b> option which opens a new window with a tree
-    view of the model similar to that seen in the <i>Find/centre on</i>
-    interface earlier. You can unselect everything with the <b>Clear</b> button
-    at the bottom of the window. Then try opening the
-    <i>Peptide</i> branch and 'digging down' to select ranges of residues
-    and individual atoms in the models. You will need to click the
-    <b>Apply selection</b> button at the bottom of the window to see the
-    display updated.
-    Beware that if you have a higher level selected (e.g. 'peptide') then
-    everything in the branch is selected even if it is not
-    highlighted.
+    To create a new display object: click on the model object icon
+    <img class="icon" src="img/display_table_MolData.jpg" alt="">
+    and select <b>Add model display object</b> from the menu.
+    <img class="icon" src="img/display_table_MolDisp.jpg" alt="">
+    A new line should appear in the display table which shows that
+    <i>all</i> of the model is selected and is coloured by <i>Atom type</i>
+    and drawn in display style <i>Bonds</i>.
+    We will look at these three items in reverse order.
+    Click on the button labelled <i>Bonds</i>
+    and you will see a menu with many options for different drawing styles - try these,
+    beware some options are not appropriate for this model and nothing will be drawn.
+    Finally select <b>Cylinders</b>
+    before moving on to click on the button labelled <i>Atom type</i>
+    to see a menu of alternative colouring schemes, try some such as
+    <b>Secondary structure</b> and <b>Residue property</b> / <b>Residue type</b>.
   </p>
-
   <p>
-    <img class="icon" src="img/tree_view_icon.jpg" alt="">
-    Now try looking at some of the specialised selection tools accessed
-    from the combobox at the top right of the Selection browser
-    window. When you choose an tool from this combobox a new frame
-    appears near the top of the browser window.
+    To alter the selection of atoms displayed
+    click on the button labelled <b>All atoms</b>.
+    The menu that appears has some quick selection options
+    such as <b>Peptide</b> and <b>CA trace</b>.
+    Try the <b>Selection browser..</b> option which opens a new window
+    with a tree view of the model
+    similar to that seen in the <i>Find/centre on</i> interface earlier.
+    You can unselect everything with the <b>Clear</b> button
+    at the bottom of the window.
+    Then try opening the <i>Peptide</i> branch
+    and 'digging down' to select ranges of residues and individual atoms in the models.
+    The display should be updated automatically as you change selections.
+    Beware that if you have a higher level selected (e.g. 'peptide')
+    then everything in the branch is selected even if it is not highlighted.
+  </p>
+  <p>
+    Now try looking at some of the specialised selection tools
+    accessed from the combobox at the top right of the selection browser window.
+    When you choose a tool from this combobox
+    a new frame appears near the top of the browser window.
   </p>
   <p>
     To select just the residues of the binding site for one of the ligands
     try the following.
-    Choose the <b>neighbours</b> option from the selection tools
-    combobox. In this tool you must enter some 'central' group of atoms
-    or residues and all the neighbouring structure will be selected.
-    In the new frame there is a selection
-    widget similar to that in the <i>Find/centre on</i> interface. Click
-    on the tree icon and select one of the ligands from the
-    <i>Monomers</i> branch. Then click on the <b>Select neighbours</b>
-    button. You will see the residues around the ligand drawn on the
-    display but, by default, the ligand itself is not drawn. You might
-    like to go back to the display table and make the display object of
-    the ligand visible. You can also go back to the tree view of the model and see
-    that the residues selected by the Neighbours tool are now
-    highlighted. You can use the tree view to change
-    the selection for the binding site.
+    Choose the <b>neighbours</b> option from the selection tools combobox.
+    In this tool you must enter some 'central' group of atoms or residues
+    and all the neighbouring structure will be selected.
+    In the new frame there is a selection widget
+    similar to that in the <i>Find/centre on</i> interface.
+    Click on the tree icon
+    <img class="icon" src="img/tree_view_icon.jpg" alt="">
+    and select one of the ligands from the <i>Ligands</i> branch.
+    Then click on the <b>Select neighbours</b> button.
+    You will see the residues around the ligand drawn on the display
+    but, by default, the ligand itself is not drawn.
+    You can check the box to include <b>the central selection</b>
+    and click <b>Select neighbours</b> again,
+    or go back to the display table and make the display object of the ligand visible.
+    You can also go back to the tree view of the model
+    and see that the residues selected by the Neighbours tool are now highlighted.
+    You can use the tree view to change the selection for the binding site.
   </p>
   <p>
-    After editing a complex selection you may like to save it: click the
-    <b>Save</b> button at the bottom of the window and, in the new window,
-    enter a name for the selection before clicking the <b>Save</b>
-    button.The saved selections can be accessed from the <b>saved selection</b> tools
-    tab.
+    After editing a complex selection you may like to save it:
+    click the <b>Save</b> button at the bottom of the window
+    and, in the new window, enter a name for the selection
+    before clicking the <b>Save</b> button.
+    The saved selections can be accessed from the <b>saved selection</b> tools tab.
   </p>
 
   <h3 id="1.8">1.8. Creating hydrogen bonds</h3>
   <p>
+    The current display objects are (probably) all model display objects.
+    There are other types of display object to show
+    hydrogen bonds, contacts, surfaces and annotation on the model.
+    For example try creating a hydrogen bond display object.
+    From the model icon menu choose <b>Add display object</b> and <b>HBonds</b>.
+    A new row with the HBonds icon
     <img class="icon" src="img/display_table_HBonds.jpg" alt="">
-    The current display objects are (probably) all
-    model display objects. There are other types of display object to show
-    hydrogen bonds, contacts, surfaces and annotation on the model. For
-    example try creating a hydrogen bond display object. From the model
-    icon menu choose <b>Add display object</b> and
-    <b>HBonds</b>. A new row with the HBonds icon appears in the
-    display table and all the hydrogen bonds in the model will be
-    drawn. To show only the hydrogen bonds between the ligand and the
-    binding site you need to change the first two columns in the display
-    table which are two sets of atoms. First click on the
-    left hand column in the display table (currently labelled <i>All atoms</i>)
-    and select <b>Monomers</b>. To select the binding site try restoring
-    the selection that you saved earlier. Click on the middle row (currently
-    labelled <i>Same as other</i> and select <b>Selection browser.</b>
-    From the tools combobox at the top right of the selection browser window
-    pick <b>saved selection</b>. From the listing of saved selections
-    pick your saved binding site and click <b>Restore</b>. You now
-    see hydrogen bonds between the ligand(s) and the binding site.
+    appears in the display table and a selection browser opens.
+    Select the ligand
+    to only show hydrogen bonds between the ligand and the binding site.
   </p>
   <p>
-    To change how the hydrogen bonds are drawn click on the hydrogen
-    bond display object icon and select <b>Drawing style</b> and
-    try the options in the new window.
+    To change how the hydrogen bonds are drawn
+    click on the hydrogen bond display object icon
+    <img class="icon" src="img/display_table_HBonds.jpg" alt="">,
+    select <b>Drawing style</b> and try the options in the new window.
   </p>
+  <img src="img/hbonds.png" alt="">
 
   <h2 id="2">2. Electron density maps</h2>
 
