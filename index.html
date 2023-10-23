@@ -646,158 +646,160 @@
   <h2 id="5">5. Presentation graphics</h2>
 
   <h3 id="5.1">5.1. Things to consider before making a picture</h3>
-  <p>Once you have set up the picture on the screen things you might want to check:</p>
   <p>
-    The appearance of ribbons, cylinders etc.
-    can be changed in the <b>Preferences</b> window
-    (accessed from the <b>Edit</b> menu);
-    click on the <b>Model display</b> folder and choose <b>Model drawing style</b>.
-    If necessary you can set these drawing style parameters for individual
-    graphical objects -
-    from the model display object icon menu select <b>Custom drawing style..</b>.
+    Once you have set up the picture on the screen
+    there are things you might want to check:
+  </p>
+  <p>
+    The appearance of ribbons, cylinders etc. can be changed
+    in the <b>Preferences</b> window (accessed from the <b>Edit</b> menu).
+    Click on the <b>Model display</b> folder and choose <b>Model drawing style</b>.
+    If necessary you can set these drawing style parameters
+    for individual graphical objects -
+    from the model display object icon menu select <b>Custom drawing style</b>.
   </p>
   <p>
     Is the background colour appropriate?
-    Look at the <b>Display</b> menu <b>Background colour</b>.
+    This can be changed using <b>Background colour</b> in the <b>Display</b> menu.
   </p>
   <p>
     Is the fog level appropriate?
     The depth queue fog can be toggled on or off from the <b>Display</b> menu
-    <b>Depth queue fog</b> or the fog level changed using the
-    <b>Clip and fog details</b> option on the
-    <b>Display</b> menu.
+    or using the icon <img class="icon" src="img/fog_icon.jpg" alt="">
+    and the fog level can be changed using the <b>Clip and fog details</b> option.
   </p>
   <p>
-    Usually the output image will have the same pixel resolution as the
-    display window so choose an appropriate window size and ratio. Note that
-    images to be put into printed publications need to be saved at much
-    higher resolution such as 1000x1000 pixels which implies a bigger image.
-    To get high resolution images it is recommended to save at twice the
-    screen size (see later notes on rendering).
+    Usually, the output image will have the same pixel resolution
+    as the display window so choose an appropriate window size and ratio.
+    Note that images to be put into printed publications need to be saved
+    at much higher resolution such as 1000x1000 pixels which implies a bigger image.
+    To get high resolution images it is recommended
+    to save at twice the screen size (see later notes on rendering).
   </p>
   <p>
-    When outputting an image file the program automatically saves the
-    program status to a file with the image file name and the extension <i>.pkl</i>.
-    If the image needs changing
-    later the status file can be loaded
-    via the <b>Restore..</b> option on the <b>File</b>
-    pull-down menu. A good reason for annotating images within CCP4mg
-    rather than adding labels afterwards is that the annotation is saved and
-    will not need redoing if the image is revised.
+    When outputting an image file the program automatically saves the program status
+    to a file with the image file name and the extension <i>.pkl</i>.
+    If the image needs changing later the status file can be loaded
+    by opening this <i>.pkl</i> file from the <b>File</b> pull-down menu.
+    A good reason for annotating images within CCP4mg
+    rather than adding labels afterwards
+    is that the annotation is saved and will not need redoing if the image is revised.
   </p>
   <p>
     Is the lighting appropriate?
     It is also useful to try moving/editing light sources.
     The lights can be changed from the <b>Lighting</b> interface
-    which is accessed via the <b>Display</b> menu. By default there is one
-    light source turned on. Up to 8 light sources are possible. Each light can
-    be selected from the menu at the top and individually turned on/off.
+    which is accessed via the <b>Display</b> menu.
+    By default there is one light source turned on.
+    Up to 8 light sources are possible.
+    Each light can be selected from the menu at the top and individually turned on/off.
   </p>
-  <img width="550" src="img/lighting.png" alt="">
+  <img src="img/lighting.png" alt="">
   <p>
-    The light position can be moved around the display by
-    holding down the left mouse button and moving the mouse in the sphere picture
-    in the bottom right. This simulates moving the light around a
-    hemispherical surface centred on the graphics window rotation centre.
+    The light position can be moved around the display
+    by holding down the left mouse button
+    and moving the mouse in the sphere picture on the right.
+    This simulates moving the light around
+    a hemispherical surface centred on the graphics window rotation centre.
   </p>
   <p>
-    The sliders scale the diffuse, specular and ambient components of the
-    light. The red, green and blue components of each of these can be altered
+    The sliders scale the diffuse, specular and ambient components of the light.
+    The red, green and blue components of each of these can be altered
     by pressing on the coloured button beside the slider.
   </p>
   <p>
-    <b>Shadows</b> can be used to add realism to a scene by
-    accentuating the sense of depth. The check box on lighting menu turns them
-    on and off.
-    <b>Occlusion</b> is a method of darkening more buried parts of structure.
+    <b>Shadows</b> can be used to add realism to a scene
+    by accentuating the sense of depth.
+    The check box on lighting menu turns them on and off.
+    <b>Occlusion</b> is a method of darkening more buried parts of the structure.
   </p>
 
   <h3 id="5.2">5.2. Render</h3>
   <p>
-    Set up any picture - if you have nothing already try loading <i>rnase.pdb</i>
-    and choose one of the ribbons styles
+    Set up any picture - if you have nothing already
+    try loading <i>rnase.pdb</i> and choose one of the ribbons styles
     from the Picture Wizard at the top of the file browser window.
   </p>
   <p>
-    A rendered image can be output in a variety of formats;
-    from the <b>File</b> menu select <b>Render</b> click the <b>Render</b> button.
+    A rendered image can be output in a variety of formats.
+    From the <b>File</b> menu, select <b>Render</b>
+    and click the <b>Render</b> button in the new window.
     After a while you will be required to enter a file name.
     A window should appear displaying the new image.
   </p>
   <p>
     Now try the options for ray tracing and stereo images.
     Note that for ray-traced shadows to be visible you will need to
-    have a light source somewhere in front of the molecule so that shadows
-    from elements of structure at the front of the model appear on elements
-    of structure further back.
-    There is a button to open the
-    <a href="https://www.ccp4.ac.uk/MG/ccp4mg_help/lighting.html">
-      lighting interface
-    </a>
+    have a light source somewhere in front of the molecule
+    so that shadows from elements of structure at the front of the model
+    appear on elements of structure further back.
+    There is an <b>Edit lighting</b> button to open the
+    <a href="https://www.ccp4.ac.uk/MG/ccp4mg_help/lighting.html">lighting interface</a>
     which allows moving and changing the light sources.
   </p>
   <p>
-    Ultra smooth ribbons is nice but only sensible
-    if you have a close up of a small section of ribbon/worm.
+    <b>Ultra-smooth ribbons</b> is nice
+    but only sensible if you have a close up of a small section of ribbon/worm.
   </p>
   <p>
-    Beware! Slow in ambient occlusion method <em>really</em> means slow.
+    Beware! Using <b>ambient occlusion</b> makes rendering <em>very</em> slow.
   </p>
   <p>
-    Some additional details to help produce images consistent with journal requirements:
+    Some additional tips to help produce images consistent with journal requirements:
   </p>
   <ul>
     <li>
       Most journals require that images have a resolution
       which is a minimum of a certain number of dots per inch (dpi).
-      This number only makes sense when you also know
-      the size of the actual image on the final paper.
-      For example your image may be 6 inches wide on physical paper
+      This number only makes sense
+      when you also know the size of the actual image on the final paper.
+      For example, your image may be 6 inches wide on physical paper
       and your journal asks for 600 dpi images.
       In the top left <b>Output image size</b> pane of the <b>Render</b> dialog
       select the <b>Use dpi</b> option
-      and probably the <b>Keep graphics window aspect</b>
+      and probably <b>Keep graphics window aspect</b>
       (unless you require a specific height also)
       and set the width and dpi as appropriate.
     </li>
     <li>
-      When stereo pairs are required the width setting should be
-      halved if one wishes a final image to be the same width as a
-      mono image. So for the dpi case above a stereo image which occupies a
-      space 6 inches wide on a page should have a width setting of
-      3 inches. However, in the case where a journal specifies a stereo
-      separation as a certain number of inches, then that number should
-      be used for the image size.
+      When stereo pairs are required the width setting should be halved
+      if one wishes a final image to be the same width as a mono image.
+      So for the dpi case above a stereo image
+      which occupies a space 6 inches wide on a page
+      should have a width setting of 3 inches.
+      However, in the case where a journal specifies
+      a stereo separation as a certain number of inches,
+      then that number should be used for the image size.
     </li>
   </ul>
 
   <h3 id="5.3">5.3. Screenshot</h3>
   <p>
-    CCP4mg can now produce really nice pictures just by taking simple screenshots
-    (<b>File/Screenshot</b>) which in many cases are comparable
-    with the quality are produced by "Render" (and can be
-    better) and produced <em>much</em> more quickly.
+    CCP4mg can now produce really nice pictures
+    just by taking simple screenshots (<b>File / Screenshot</b>),
+    which in many cases are comparable with the quality are produced by "Render"
+    (and can be better) and produced <em>much</em> more quickly.
   </p>
   <p>
     To produce high-quality screenshots
-    it is necessary to make sure that shaders are turned on
-    (<b>Edit / QtMG / Preferences / Display / Drawing quality</b>).
+    it is necessary to make sure that shaders are turned on in
+    <b>Edit / [QtMG] / Preferences / Display / Drawing quality</b>.
   </p>
   <p>
     One thing which is particularly useful about the screenshot method
-    is that pictures with "occlusion" can be produced in a few seconds, rather
-    than the several hours "Render" might take.
+    is that pictures with "occlusion" can be produced in a few seconds,
+    rather than the several hours "Render" might take.
   </p>
   <p>
     If you are zoomed in close on a small number of spheres,
     using the "Perfect spheres" drawing style will produce much nicer images.
   </p>
   <p>
-    The notes about high-resolution images for journals mention in the <b>Render</b>
-    section above also apply to screenshots.
+    The notes about high-resolution images for journals
+    mentioned in the <b>Render</b> section above also apply to screenshots.
     In fact, low resolution images are not as well anti-aliased (smoothed)
-    with screenshots compared to "Render" so making sure the
-    resolution is high enough is more important for screenshots.
+    with screenshots compared to "Render"
+    so making sure the resolution is high enough is more important for screenshots.
   </p>
   <p>
     Note that not all features required for high quality screenshots
