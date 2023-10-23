@@ -478,89 +478,79 @@
   <h3 id="3.1">3.1. Creating and colouring a surface</h3>
   <p>
     Load a small protein such as <i>1df7</i> (small so calculations are quick).
-    There are two ways to create a surface:
+    Click on the model icon <img class="icon" src="img/MolData.gif" alt="">
+    and from the menu select <b>Add display object</b> and <b>Surface</b>
+    to create a surface display object.
   </p>
-  <ul>
-    <li>In the Display Style menu of a model display object select <b>Surface</b></li>
-    <li>
-      Click on the model icon (<img class="icon" src="img/MolData.gif" alt="">)
-      and from the menu select <b>Add display object</b> and <b>Surface</b>
-      to create a surface display object.
-      This approach gives you more options.
-    </li>
-  </ul>
-  <img src="img/tutorial_surface_display_table.jpg" alt="">
+  <img src="img/surface_display_table.png" alt="">
   <p>
-    The three columns in the Surface row of the display table are the
-    selection of atoms covered by the surface, the selection of context
-    atoms (explained below) and the colour scheme.
-    Calculating a surface may take a little time so when you create a surface
-    display object it is not drawn immediately - you have the chance to select
-    the atoms to be covered by the surface and then you should click on the
-    surface display object icon <img class="icon" src="img/SurfaceDispobj.jpg" alt="">
-    and select show (or use the short cut of clicking it
-    with the right mouse button).
+    The three columns in the Surface row of the display table are
+    the selection of atoms covered by the surface,
+    the selection of context atoms (explained in the next section)
+    and the colour scheme.
+    Calculating a surface may take a little time
+    so when you create a surface display object it is not drawn immediately
+    - you have the chance to select the atoms to be covered by the surface
+    and then you should click on the surface display object icon
+    <img class="icon" src="img/SurfaceDispobj.jpg" alt="">
+    and select <b>visible</b>
+    (or use the shortcut of clicking it with the right mouse button).
   </p>
   <p>
-    Most of the items on the surface Colour Scheme menu are the same as those
-    on the model colour scheme menu - the surface will just be coloured the same
-    as the underlying atom. The extra option at the top of the menu are to colour
-    by electrostatic potential (try it).
+    Most of the items on the surface Colour Scheme menu
+    are the same as those on the model colour scheme menu
+    - the surface will just be coloured the same as the underlying atom.
+    The extra option at the top of the menu
+    is to colour by electrostatic potential (try it).
   </p>
 
   <h3 id="3.2">3.2. Covering a limited set of atoms</h3>
   <p>
     For example to create a transparent surface
-    over just the binding site for the MTX ligand
+    over just the binding site for the MTX ligand:
   </p>
-  <img src="img/tutorial_surface_active_site.jpg" alt="">
+  <img src="img/surface_active_site.png" alt="">
   <p>
     First select the atoms to be covered by the surface:
-    from the surface Atom Selection menu select <b>Selection
-      bowser..</b> and at the top of the new selection browser window choose
-    <b>neighbours</b> selection mode. and in the <i>atom selection</i>
-    line of the window select the monomer <i>//501(MTX)</i>. Note that the
-    selection radius is set quite high to 7A and that, by default, solvent and
-    the named central atoms (that is the MTX ligand) are excluded from the
-    selection. Hit the <b>Select neighbours</b> button.
-    If you draw the surface now it will
-    completely wrap around all of the selected atoms as if they were a single
-    separate molecule. To prevent this go to the menu in the second column
+    from the surface Atom Selection menu choose <b>Neighbourhood of / A/501(MTX)</b>.
+    If you draw the surface now it will completely wrap around
+    all of the selected atoms as if they were a single separate molecule.
+    To prevent this go to the menu in the second column
     to select the context for the surface and select <b>All peptide</b>.
   </p>
   <p>
     Now click on the surface display icon
     <img class="icon" src="img/SurfaceDispobj.jpg" alt="">
     and check <b>Visible</b>.
-    Click on the surface display object icon and select
-    <b>Surface drawing style</b>. Try the various options.
-    The opacity of the transparent surface can be changed by selecting
-    <b>Set transparency</b> from the menu, settting the opacity
-    for the surface object to say 0.4.
+    Click on the surface display object icon and select <b>Surface style</b>.
+    Try the various options.
+    The opacity of the transparent surface can be changed
+    by selecting <b>Set transparency</b> from the menu.
+    Set the opacity for the surface object to 0.4.
   </p>
   <p>
     To get the image in the picture you need to add a display object to
-    show the ligand MTX so the display table is ..
+    show the ligand MTX so the display table is looks like:
   </p>
-  <img src="img/tutorial_surface_active_site_gui.jpg" alt="">
+  <img src="img/surface_active_site_gui.png" alt="">
   <p>
-    The scene can be saved to file using the <b>Render..</b> option at
-    the bottom of the file menu. For a non-stereo image the same size as
-    the CCP4mg graphics window just click the <b>Render</b> button. After
-    a short delay while the image is processed you will be asked to enter
-    the name of an image file and then the image will be displayed in a
-    new window. The output image quality will be much superior to the
-    on-screen quality.
+    The scene can be saved to file using
+    the <b>Render..</b> option at the bottom of the file menu.
+    For a non-stereo image the same size as the CCP4mg graphics window
+    just click the <b>Render</b> button.
+    After a short delay while the image is processed
+    you will be asked to enter the name of an image file
+    and then the image will be displayed in a new window.
+    The output image quality will be much superior to the on-screen quality.
   </p>
 
   <h3 id="3.3">3.3. Notes</h3>
   <p>
-    The calculation parameters and colour scheme for electrostatic potential can be set
-    in <b>Surfaces</b> folder of the <b>Preferences</b> window (find this
-    at the bottom of the <b>Edit</b> menu or the <b>QtMG</b> menu on Macs).
+    The calculation parameters and colour scheme for electrostatic potential
+    can be set in <b>Surfaces</b> folder of the <b>Preferences</b> window
+    (find this at the bottom of the <b>Edit</b> menu or the <b>QtMG</b> menu on Macs).
     <a href="https://www.ccp4.ac.uk/MG/ccp4mg_help/surfaces.html">
-      More information on surfaces
-    </a>
+      More information on surfaces</a>.
   </p>
 
   <h2 id="4">4. Text and Extra Images</h2>
