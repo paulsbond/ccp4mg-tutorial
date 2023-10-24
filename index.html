@@ -946,11 +946,6 @@
     Load any molecule of interest to you or use any one from the tutorial.
     It is easiest to work if the <i>Display style</i> is
     <i>Bonds</i> or <i>Fat bonds</i>.
-    If you want to look at two or more homologous
-    structures then the structures can be superposed - see the
-    <a href="https://www.ccp4.ac.uk/MG/ccp4mg_help/tutorial/superpose.html">
-      Protein Superposition tutorial
-    </a>.
   </p>
 
   <h3 id="7.2">7.2. Geometry</h3>
@@ -958,73 +953,73 @@
     This section introduces some basic tools for interrogating the structure.
     From the <b>Application</b> menu select <b>Geometry</b>.
   </p>
-  <img src="img/tutorial_geometry_gui.jpg" alt="">
+  <img src="img/geometry.png" alt="">
   <p>
-    Double-click on atoms with the left mouse button to see them listed
-    in the Geometry window. The window lists: the distance between an atom
-    and the previously clicked atom; the bond angle between an atom and the
-    two preceeding atoms and the torsion angle defined by the atom and the
-    three preceeding atoms. Shift+double-click will start a new "tree" of
-    selections. i.e. the atom's distance to the previous one will not be
-    shown.
+    Double-click on atoms with the left mouse button
+    to see them listed in the Geometry window.
+    The window lists: the distance between an atom and the previously clicked atom;
+    the bond angle between an atom and the two preceeding atoms
+    and the torsion angle defined by the atom and the three preceeding atoms.
+    Shift+double-click will start a new "tree" of selections.
+    i.e. the atom's distance to the previous one will not be shown.
   </p>
   <p>The <b>Clear</b> button will clear the list and the displayed lengths.</p>
 
   <h3 id="7.3">7.3. Hydrogen bonds</h3>
   <p>
+    To display the hydrogen bonds within the loaded model click on the model icon
     <img class="icon" src="img/display_table_MolData.jpg" alt="">
-    To display the
-    hydrogen bonds within the loaded model click on the model icon and select
-    the <b>Add display object..</b> .. <b>Hydrogen bonds</b>.
-    Note also the <b>Close contacts</b>
-    option on the same menu that has a very similar interface to the
-    hydrogen bond interface that we are about to look at. Now all hydrogen
-    bonds within the structure are displayed and, in the display table, an
-    extra line appears under the model name.
+    and select the <b>Add display object / HBonds</b>.
+    Note also the <b>Add display object / Contacts</b> option on the same menu
+    that has a very similar interface to the hydrogen bond interface
+    that we are about to look at.
+    A new row with the HBonds icon
+    <img class="icon" src="img/display_table_HBonds.jpg" alt="">
+    appears in the display table and a selection browser opens
+    to choose the atoms we want to view hydrogen bonds for.
+    For now, click peptide and close the selection browser.
   </p>
   <p>
-    <img class="icon" src="img/HBonds.gif" alt="">
-    From the Hbonds icon menu select <b>Drawing style</b>
-    and in the new window check the box labelled <i>Label with distance/bond length</i>.
-    From the Hbonds icon menu you can also select <b>List HBonds</b>
+    To change how the hydrogen bonds are drawn
+    click on the hydrogen bond display object icon
+    <img class="icon" src="img/display_table_HBonds.jpg" alt="">,
+    select <b>Drawing style</b> and try the options in the new window.
+    From the Hbonds icon menu you can also select <b>List data</b>
     and the CCP4mg file viewer will open listing all of the hydrogen bonds in one tab.
     It is possible to save such listings to a file via the <b>Save</b> option
     on the file viewers <b>File</b> drop-down menu.
-  </p>
-  <p>
-    Several tools show listing in the file viewer:
+    Several other tools can be listed in the file viewer:
     close contacts, secondary structure and the solvent accessibility.
   </p>
   <p>
-    It is possible to display only the hydrogen bonds between two
-    specified sets of atoms. The two sets of atoms are controlled by the
-    menus in the first two columns of the table. By default the first atom
-    selection is <i>All atoms</i>; click on this
-    and change it to <b>Main chain</b> (in a sub-menu from <i>Peptide</i>).
-    The second set of atoms remains <i>Same as other</i>
-    so only HBonds between main chain atoms and main chain atoms are shown.
-    Now try changing the <i>Same as other</i> to <b>Side chains</b> to see all HBonds
-    between main chain and side chain atoms.
+    It is possible to display only the hydrogen bonds
+    between two specified sets of atoms.
+    The two sets of atoms are controlled by
+    the menus in the first two columns of the table.
+    Change the first atom selection to <b>Peptide / Main chain</b>
+    and the second atom selection to <b>Peptide / Side chains</b>
+    to see all H-bonds between main-chain and side-chain atoms.
   </p>
+  <img src="img/main_side_hbonds.png" alt="">
   <p>
-    The criteria for HBonds can be changed in the
-    <b>Preferences</b> window (on the <b>Edit</b> pull-down menu)
-    - look in the <b>Model analysis</b> folder for <b>Hydrogen bonds</b>.
+    The criteria for HBonds can be changed in
+    <b>Edit / Preferences / Model analysis / Hydrogen bond calculation parameters</b>.
     The algorithm and parameters are explained in the
     <a href="https://www.ccp4.ac.uk/MG/ccp4mg_help/analysis.html#hbonds">
       Structure Analysis documentation</a>.
   </p>
   <p>
-    If you want to include hydrogen bonds when creating an image you may
-    want to have more options on display style or to be able to add or
-    delete some bonds. These things are possible if you export the hydrogen
-    bonds as vectors.
+    If you want to include hydrogen bonds when creating an image
+    you may want to have more options on their display style
+    or to be able to add or delete some bonds.
+    These things are possible if you export the hydrogen bonds as vectors,
+    which will be explained in the next section.
   </p>
 
   <h3 id="7.4">7.4. Displaying vectors</h3>
   <p>
-    <img class="icon" src="img/HBonds.gif" alt="">
     Generate a vector file by clicking on the Hbond display object icon
+    <img class="icon" src="img/display_table_HBonds.jpg" alt="">
     and selecting <b>Export vectors</b>.
   </p>
   <p>
@@ -1077,50 +1072,51 @@
 
   <h3 id="7.5">7.5. Solvent accessibile surface</h3>
   <p>
-    The solvent accessible surface area is the surface
-    area that is accessible to a 'water molecule'. In calculations the
-    'water molecule' is usually represented by a sphere of about 1.4Å radius (see
+    The solvent accessible surface area is the surface area
+    that is accessible to a 'water molecule'.
+    In calculations the 'water molecule' is usually represented
+    by a sphere of about 1.4Å radius (see
     <a href="https://www.ccp4.ac.uk/MG/ccp4mg_help/analysis.html#sas">
       Analysis documentation</a>).
-    To colour a model by the SAS area: from the <i>Colour scheme</i> menu select
-    <b>Residue property</b> and then <b>Residue solvent access</b>.
-    There may be a short pause for the calculation and then the model is
-    coloured with mostly blue on the inside of the model and red residues on
-    the outside of the model.
+    To colour a model by the SAS area: from the <i>Colour scheme</i> menu
+    select <b>Residue property / Residue solvent access</b>.
+    There may be a short pause for the calculation
+    and then the model is coloured with mostly blue on the inside of the model
+    and red residues on the outside of the model.
   </p>
   <p>
     When the display object is coloured by some interesting chemical property
     the display object icon menu <img class="icon" src="img/MolDisp.gif" alt="">
-    has an item <b>List colour data</b>.
+    has an entry called <b>List colour data</b>.
     This will open the file viewer listing the solvent accessibility
     of residues and atoms.
   </p>
   <p>
-    The parameters for the SAS calculation
-    are accessible in the <b>Preferences</b> window (on the <b>Edit</b> menu)
-    in the <b>Model analysis</b> folder <b>Solvent accessible surface</b>.
+    The parameters for the SAS calculation can be changed in
+    <b>Edit / Preferences / Model analysis / Solvent accessible surface area</b>.
     There is little reason to change these but you may want to change the colour coding.
-    To do this open the <b>Model colours</b> folder in the <b>Preferences</b> window
-    and select <b>Residue solvent access</b>.
+    This can be done in <b>Preferences / Model colours / Residue solvent access</b>.
   </p>
-  <img src="img/tutorial_SAS_colour_gui.jpg" alt="">
+  <img src="img/sas_colour_gui.png" alt="">
   <p>
-    The window has a table showing the parameter value and the colour for
-    that parameter value. Every residue on the display is given a colour,
-    dependent on its SAS, which is interpolated from the fixed values and
-    colours in the table. If a residue SAS falls outside the normal range of
-    values in the table then it is given one of the colours, specified at
-    the top of the window, for below or above the normal range. The 'outside
-    normal range' colours are usually contrasting the normal colours in
-    order to draw attention to outliers but they could be made the same as
-    the normal range colours. Note that any solvent in your model is
-    coloured green (or the below normal range colour) because it is usually
-    excluded from the SAS calculation and assigned a value of -1.0.
+    The window has a table showing the parameter value
+    and the colour for that parameter value.
+    Every residue on the display is given a colour, dependent on its SAS,
+    which is interpolated from the fixed values and colours in the table.
+    If a residue SAS falls outside the normal range of values in the table
+    then it is given one of the colours specified at the top of the window.
+    The 'outside normal range' colours are usually contrasting the normal colours
+    in order to draw attention to outliers
+    but they could be made the same as the normal range colours.
+    Note that any solvent in your model
+    is coloured green (or the below normal range colour)
+    because it is usually excluded from the SAS calculation and assigned a value of -1.
   </p>
   <p>
     Note that there is also an option to colour by atom SAS:
-    from the <i>Colour scheme</i> menu select <b>Atom property</b>
-    and then <b>Atom solvent access</b>.</p>
+    from the <i>Colour scheme</i> menu
+    select <b>Atom property / Atom solvent access</b>.
+  </p>
 
   <h2 id="8">8. Making movies</h2>
 
