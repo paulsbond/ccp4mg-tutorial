@@ -83,9 +83,9 @@
     <li><a href="#6">Superpose proteins</a>
       <ol>
         <li><a href="#6.1">Load homologous proteins</a></li>
-        <li><a href="#6.2">Superpose by secondary structure matching</a></li>
+        <li><a href="#6.2">Superpose by GESAMT/SSM</a></li>
         <li><a href="#6.3">Superposing binding sites</a></li>
-        <li><a href="#6.4">Superposing the ligand</a></li>
+        <li><a href="#6.4">User-defined superposition</a></li>
       </ol>
     </li>
     <li><a href="#7">Investigating a structure</a>
@@ -809,32 +809,43 @@
 
   <h3 id="6.1">6.1. Load homologous proteins</h3>
   <p>
-    Select two homologous proteins such as <i>1df7</i> and <i>4dfr</i>
-    (hint to remove existing models: from the <b>Edit</b> menu select
-    <b>For all data</b> and <b>Close</b>).
+    Open two homologous proteins such as <i>1df7</i> and <i>4dfr</i>
+    (hint: to remove existing models use <b>File / Close all data</b>).
   </p>
   <p>
-    To set a suitable colour and display style for all models open the
-    <b>Picture wizard</b> window from the <b>Applications</b> menu. In the
-    picture wizard window select <b>colour molecule</b> from the
-    <b>bonds</b> folder in the list at the top of the window. Click the
-    <b>Create picture</b> button to redraw the scene.
-    (Note that the Picture Wizard changes are applied to all
-    <i>visible</i> models and by default any existing display objects are deleted.)
+    To set a suitable colour and display style for all models
+    open the <b>Picture wizard</b> window from the <b>Applications</b> menu.
+    In the Picture Wizard window select <b>Colour by PDB file</b>
+    from the <b>Bonds</b> folder in the list at the top of the window.
+    Click the <b>Create picture</b> button to redraw the scene.
+    (Note that the Picture Wizard changes are applied to all <i>visible</i> models
+    and by default any existing display objects are deleted).
   </p>
+  <img src="img/1df7_4dfr.png" alt="">
 
-  <h3 id="6.2">6.2. Superpose by secondary structure matching</h3>
+  <h3 id="6.2">6.2. Superpose by GESAMT/SSM</h3>
   <p>
-    From the <b>Applications</b> pull-down menu select <b>Superpose</b>.
+    From the <b>Applications</b> pull-down menu select <b>Superpose models</b>.
   </p>
-  <img src="img/tutorial_superpose_gui.jpg" alt="">
+  <img src="img/superpose_models.png" alt="">
   <p>
-    In the new window check that the Superpose mode (at the top of the window)
-    is <b>Secondary structure matching(SSM)</b>
-    and hit the <b>Superpose</b> button.
-    The models will be superposed.
-    To show the equivalent residues and distances between CA atoms
-    check the box labelled <b>Show matchs with..</b>.
+    In the new window check
+    that the <b>Superpose method</b> at the top of the window is <b>Gesamt/SSM</b>
+    and that the <b>Method</b> in the <i>Options</i> frame at the bottom is <b>SSM</b>.
+    The models will be superposed when you click the <b>Superpose</b> button.
+    If you want to see the equivalent residues and distances between CA atoms
+    check the box labelled <b>Show matchs with</b>.
+  </p>
+  <p>
+    The <a href="https://doi.org/10.1107/S0907444904026460">SSM method</a>
+    relies on there being multiple secondary structure elements
+    in the model for matching.
+    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5117261/">GESAMT</a>
+    is an improved method that matches local fragments
+    without the need for well-defined secondary structure.
+    To use GESAMT change the <b>Method</b> to <b>GESAMT</b>
+    at the bottom of the window.
+    However, if you use GESAMT you do not have the option to display residue matches.
   </p>
   <p>
     In the <i>Models to superpose</i> frame of the interface is a
@@ -848,87 +859,84 @@
 
   <h3 id="6.3">6.3. Superposing binding sites</h3>
   <p>
-    The SSM method gives a good global superposition
-    but sometimes localised regions can be better superposed by matching
-    only a selection of residues in the region. A better local
-    superposition can particularly help in comparing binding
-    sites. Selecting the appropriate residues to superpose may require
-    some time and thought but the <b>Match close residues</b> method is a
-    simple automatic method that is worth a try. The method requires that
-    the models are already roughly superposed and that a limited set of
-    residues are selected in the FIXED model. The algorithm matches
-    residues in the moving model that are close to the selected residues
-    in fixed model and superposes them.
+    The GESAMT/SSM methods give a good global superposition
+    but sometimes localised regions can be better superposed
+    by matching only a selection of residues in the region.
+    A better local superposition can particularly help in comparing binding sites.
+    Selecting the appropriate residues to superpose may require some time and thought
+    but the <b>Match close residues</b> method
+    is a simple automatic method that is worth a try.
+    The method requires that the models are already roughly superposed
+    and that a limited set of residues are selected in the FIXED model.
+    The algorithm matches residues in the moving model
+    that are close to the selected residues in fixed model and superposes them.
   </p>
   <p>
-    The 1df7 and 4dfr structures both contain the ligand MTZ. To
-    optimise superposition of the MTZ binding site select the <i>Match close
-      residues</i> method and then for the fixed model select the MTZ
-    binding site by clicking the model selection widget lassoo
-    <img class="icon" src="img/lassoo.jpg" alt="">
-    and pick <i>Neighbourhood..</i> from the menu to open a new window.
+    The 1df7 and 4dfr structures both contain the ligand MTX.
+    To optimise superposition of the MTX binding site
+    first select the <b>Match close residues</b> method.
+    Then in the <i>Models to superpose</i> frame
+    click the lasso selection icon <img class="icon" src="img/lassoo.jpg" alt="">
+    for the fixed model and choose <b>Neighbourhood</b> to open a new window.
   </p>
-  <img src="img/tutorial_superpose_neighbourhood.jpg" alt="">
+  <img src="img/superpose_neighbourhood.png" alt="">
   <p>
-    In the new window select the MTZ ligand as the centre of the
-    neighbourhood and click the <i>Select neighbours</i> botton. This
-    window closes and the seelction command appears in the main Superpose window.
-    You can see which residues have been selected by checking the box
-    labelled <i>Highlight selected atoms</i>. Now click the <i>Superpose</i>
-    button to superpose the close residues. There will be only a slight
-    movement to optimise the superposition of the binding site.
+    In the new window select the MTX ligand as the centre of the neighbourhood
+    and click the <b>Select neighbours</b> button.
+    This window closes and the selection command appears in the main superpose window.
+    You can see which residues have been selected
+    by checking the box labelled <i>Highlight selected atoms</i>.
+    Now click the <b>Superpose</b> button to superpose the close residues.
+    There will be only a slight movement
+    to optimise the superposition of the binding site.
   </p>
 
-  <h3 id="6.4">6.4. Superposing the ligand</h3>
+  <h3 id="6.4">6.4. User-defined superposition</h3>
   <p>
-    This part of the tutorial introduces the tools for
-    manually defined matches and uses these tools to superpose equivalent
-    ligands.
+    This part of the tutorial introduces the tools for manually defined matches
+    and uses these tools to superpose equivalent ligands.
+    Click on the <b>User defined matches</b> method in the superpose window.
+    The window will change significantly to show a <i>User defined matches</i> frame.
+  </p>
+  <img src="img/user_defined_matches.png" alt="">
+  <p>
+    At the top of this frame is a list box of the defined matches.
+    To the right of the list is a set of buttons with tools to edit the match list.
+    Beneath the list are tools for specifying one match.
+    There are various modes for a match: atom, residue, residue range, monomer etc.
+    and the selection widget will be changed appropriately for each match mode.
+    From the combo box labelled <i>Use match of mode</i> select <b>monomer</b>.
+    Use the selection widgets to select the MTX ligand
+    for 1df7 (A/501) and 4dfr (A/161).
+    You must click the <b>Save this match</b> button to save it to the list.
+    The matches between the two MTX molecules should be shown on the display.
+    You can now click <b>Superpose</b> to superpose the two ligands.
   </p>
   <p>
-    Click on the <i>User defined matches</i> method. The window will
-    change significantly to show a <i>User defined matches</i> frame.
-  </p>
-  <img src="img/superpose_interactive.jpg" alt="">
-  <p>
-    At the top of this frame is a list box of the defined matches that is initially
-    empty except for a <i>New match..</i> option. To the right of the list
-    is a set of buttons with tools to edit the match list. Beneath the
-    list are tools for specifying one match. There are various modes for
-    a match: atom, residue, residue range, monomer etc. and the selection
-    widget will be changed appropriately for each match mode. From the
-    combo box labelled <i>match mode</i> select <i>monomer</i>. Use the
-    selection widgets to select the
-    MTX ligand for 1df7 (// /501[MTX] - beware the chain does not have a
-    name) and 4dfr (A/160[MTX]). You must click the <i>Save this match</i>
-    button to get this match saved to the list. The matches between the two
-    MTX molecules should be shown on the display. You can now click
-    <i>Superpose</i> to superpose the two ligands.
+    The matching algorithm for monomers
+    is capable of finding the equivalent atoms in non-identical molecules.
+    It uses a graph matching approach
+    which looks at the atom element types and the bonds between the atoms.
+    It takes no account of the atom names.
   </p>
   <p>
-    The matching algorithm for monomers is capable of finding the
-    equivalent atoms in non-identical molecules. It uses a graph matching
-    approach which looks at the atom element types and the bonds between
-    the atoms. It takes no account of the atom names.
-  </p>
-  <p>
-    Further matches can be added using the interface or they can be
-    selected by clicking on atoms in the model with right mouse button and
-    using the Superpose options which appear at the bottom of the popup
-    menu. Try using the menu item <i>Superpose - select this</i> / <i>Residue</i>
+    Further matches can be added using the interface
+    or they can be selected by clicking on atoms in the model with right mouse button
+    and using the Superpose options which appear at the bottom of the popup menu.
+    Try using the menu item <b>Superpose: select this / Residue</b>
     to select an active site residue
-    then click on the
-    equivalent residue in the other model and the menu should now include
-    <i>Superpose - match this to</i> with a list of unmatched items in the
-    other model.
+    then click on the equivalent residue in the other model
+    and the menu should now include <b>Superpose: match this to</b>
+    with a list of unmatched items in the other model.
   </p>
   <p>
-    Matches selected by clicking on the model are shown in the match
-    list and can be edited. A possible useful feature is the ability to
-    switch off a match: click on the match in the list to make it the
-    edited match then uncheck the box labelled <i>Use match</i> and
-    remember to click the <i>Save match</i> button. The inactive matches
-    are shown greyed-out in the match list.
+    Matches selected by clicking on the model
+    are shown in the match list and can be edited.
+    A possible useful feature is the ability to switch off a match:
+    click on the match in the list to make it the edited match
+    then uncheck the box to the left of <i>Use match of mode</i>
+    and remember to click the <i>Save match</i> button.
+    The inactive matches are shown greyed-out in the match list.
   </p>
 
   <h2 id="7">7. Investigating a structure</h2>
