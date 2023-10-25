@@ -1122,95 +1122,100 @@
 
   <h3 id="8.1">8.1. Introduction</h3>
   <p>
-    CCP4mg can create movies in animated GIF or MPEG format or the
-    screenshots written out by CCP4mg can be input to some other movie
-    creation program. Either GIF or MPEG format can be incorporated into
-    presentations such as PowerPoint but animated GIFs are more acceptable
-    on web pages. To make a movie the program outputs a series of images
-    which will be the frames of the movie and these are then compiled into
-    one movie file. If you are making a longer, more complex, movie you can
-    create several scenes which can be merged together later.
+    CCP4mg can create movies in animated GIF or MPEG format
+    or the screenshots written out by CCP4mg
+    can be input to some other movie creation program.
+    Either GIF or MPEG format can be incorporated into presentations
+    such as PowerPoint but animated GIFs are more acceptable on web pages.
+    To make a movie the program outputs a series of images
+    which will be the frames of the movie
+    and these are then compiled into one movie file.
+    If you are making a longer, more complex, movie
+    you can create several scenes which can be merged together later.
   </p>
   <p>
-    For a simple movie the only thing that moves is the camera; the
-    movement helps the user to see the 3D depth and a movie often gives a
-    better idea of the overall structure than separate, fixed viewpoints.
-    For this sort of movie you select either the required movement (e.g. a
-    rotation about the vertical axis) or choose the start and end view and
-    the program will glide between these two views.
+    For a simple movie the only thing that moves is the camera;
+    the movement helps the user to see the 3D depth
+    and a movie often gives a better idea of the overall structure
+    than separate, fixed viewpoints.
+    For this sort of movie you select either the required movement
+    (e.g. a rotation about the vertical axis)
+    or choose the start and end view
+    and the program will glide between these two views.
   </p>
   <p>
     More complex movies can have some movement of models
     or changes to other properties of the displayed data (see the
     <a href="https://www.ccp4.ac.uk/MG/ccp4mg_help/movies.html#transforming_objects">
       Movie documentation</a>).
-    You can set up and save the two or more displays and the movie will be
-    created to interpolate smoothly between the different displays.
+    You can set up and save the two or more displays
+    and the movie will be created to interpolate smoothly
+    between the different displays.
   </p>
   <p>
-    Movies may look impressive if there is lots on the display and lots of
-    movement but an audience will probably understand more about the
-    chemistry if the pictures are simple and the movie is slow and repeats.
-    For a presentation several short movies are probably more flexible than
-    one long movie. Remember also that many data projectors have limited
-    resolution and the maximum image size may be 600 by 600 pixels.
+    Movies may look impressive if there is lots on the display and lots of movement
+    but an audience will probably understand more about the chemistry
+    if the pictures are simple and the movie is slow and repeats.
+    For a presentation several short movies
+    are probably more flexible than one long movie.
+    Remember also that many data projectors have limited resolution
+    and the maximum image size may be 600 by 600 pixels.
   </p>
 
   <h3 id="8.2">8.2. Making a simple movie with moving camera</h3>
   <p>
-    From the <b>Applications</b> menu choose <b>Movie editor</b> and <b>New movie</b>
+    Click <b>Applications / Movie editor / New movie</b>
     and enter a name for the movie.
-    A directory called <i>movie_name</i>.ccp4mg_presentation
-    will be created and all files created by the movie application will be
-    saved here. The movie application window appears on the screen.
+    A directory called <i>movie_name</i>.ccp4mg_presentation will be created
+    and all files created by the movie application will be saved here.
+    The movie application window appears on the screen.
   </p>
   <p>
     Set up a picture and make sure the model is in the centre of the display.
-    Now make a snapshot of the current display by right-mouse
-    clicking on the frame in the movie window labelled
-    <b>Save status here</b> and select <b>Save current view/display</b>
-    from the pop-up menu. A small image of the current display should
-    appear in the movie window. This snapshot is labelled 00001, and
-    subsequent snapshots will be labelled 00002, 00003 etc..
+    Now make a snapshot of the current display by right-mouse clicking
+    on the frame in the movie window labelled <b>Save status here</b>
+    and select <b>Save current view/display</b> from the pop-up menu.
+    A small image of the current display should appear in the movie window.
+    This snapshot is labelled 00001,
+    and subsequent snapshots will be labelled 00002, 00003 etc..
   </p>
-  <img src="img/tutorial_movie_gui.jpg" alt="">
+  <img src="img/movie_gui.png" alt="">
   <p>
-    Beneath the image are some options;
-    set the View to <b>rotate about y</b>. See what this does by selecting
-    <b>Preview</b> from the <b>Action</b> menu.
-    This will show you, in the main graphics window, what would
-    appear in the movie but will not record anything. You can also try other
-    options on the View menu: try setting to <b>rock</b> or <b>transform</b>.
-    For the <b>transform</b> option you will
-    need to click on the <b>Details</b> button and
-    in the <b>Transform details</b> section of the Details window enter
-    some transformation (for example <b>360</b> for X-rotation)
-    and hit the <b>Apply</b> button.
+    Beneath the image are some options; set the <i>View</i> to <b>rotate about y</b>.
+    See what this does by selecting <b>Preview</b> from the <b>Action</b> menu.
+    This will show you, in the main graphics window,
+    what would appear in the movie but will not record anything.
+    You can also try other options on the <i>View</i> menu:
+    try setting to <b>rock</b> or <b>transform</b>.
+    For the <b>transform</b> option you will need to click on the <b>Details</b> button
+    and in the <b>Transform details</b> section of the Details window
+    enter some transformation (for example <b>360</b> for X-rotation).
   </p>
   <p>
-    To record the scene select <b>Make movie in stages</b> and <b>Record frames</b>
-    from the <b>Action</b> menu. This
-    will run through the transformation saving screenshots to files named
-    <i>movie_name</i>.ccp4mg_presentation/scene_00001/frame_00001.png
-    etc.. If screenshots are made offscreen then the main display window is
-    not necessarily updated but you will see the progress reported in the
-    top bar of the movie window. If the screenshots are NOT made offscreen
-    (the usual default) then you will see the display updated but you must
-    be careful not to obscure the main graphics window as this will corrupt
-    the picture. You can check or change how screenshots are made by going
-    to the <b>Preferences</b> and,
-    from the <b>Images and movies</b> folder, select <b>Screenshots</b>.
+    To record the scene select <b>Action / Make movie in stages / Record frames</b>.
+    This will run through the transformation
+    saving screenshots to files named scene_00001/frame_00001.png etc..
+    If screenshots are made offscreen (the usual default)
+    then the main display window is not necessarily updated
+    but you will see the progress reported in the top bar of the movie window.
+    If the screenshots are NOT made offscreen
+    then you will see the display updated
+    but you must be careful not to obscure the main graphics window
+    as this will corrupt the picture.
+    You can check or change how screenshots are made by going to
+    <b>Preferences / Images and movies / Screenshots</b>.
   </p>
   <p>
-    When recording screenshots is finished go again to the <b>Action</b> menu
-    and select <b>Make movie in stages</b> and <b>Make movie scene</b>.
-    The separate screenshots are now merged into one movie file; this can
-    take a little time, there is small window showing that the compile is
-    being done and then the resultant movie is played automatically or can
-    be played by selecting <b>Play</b> from the <b>Action</b> menu. By
-    default an animated GIF file is created and replayed in the CCP4mg file
-    viewer. Like most web browsers this will automatically play animated
-    GIFs on a continuous loop.
+    When recording screenshots is finished select
+    <b>Action / Make movie in stages / Make movie scene</b>.
+    The separate screenshots are now merged into one movie file;
+    this can take a little time,
+    there is small window showing that the compile is being done
+    and then the resultant movie is played automatically
+    or can be played by selecting <b>Action / Play</b>.
+    By default an animated GIF file is created and replayed in the CCP4mg file viewer.
+    Like most web browsers
+    this will automatically play animated GIFs on a continuous loop.
   </p>
   <p>
     Now try making the movie zoom-in from the view of the whole model to
