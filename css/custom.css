@@ -1,3 +1,7 @@
+p.warning {
+    color: red;
+}
+
 h6 {
     text-transform: uppercase;
     letter-spacing: .15rem;
